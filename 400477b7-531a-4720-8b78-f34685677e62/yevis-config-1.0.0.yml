@@ -26,23 +26,23 @@ authors:
     name: "Yamada, Kohki"
 workflow:
   name: DAT2-cwl Platanus-b assemble
-  readme: "https://raw.githubusercontent.com/pitagora-network/DAT2-cwl/0fbf50ca5e5b9473383ae0edbdc883e091b0ae42/README.md"
+  readme: "https://raw.githubusercontent.com/pitagora-network/DAT2-cwl/0e1831eb613375c50fd83d19647d3b101880110c/tool/platanus-b/assemble/README.md"
   language:
     type: CWL
     version: v1.0
   files:
-    - url: "https://raw.githubusercontent.com/pitagora-network/DAT2-cwl/0fbf50ca5e5b9473383ae0edbdc883e091b0ae42/tool/platanus-b/assemble/platanus-b-assemble.cwl"
+    - url: "https://raw.githubusercontent.com/pitagora-network/DAT2-cwl/0e1831eb613375c50fd83d19647d3b101880110c/tool/platanus-b/assemble/platanus-b-assemble.cwl"
       target: platanus-b-assemble.cwl
       type: primary
   testing:
     - id: test
       files:
-        - url: "https://raw.githubusercontent.com/pitagora-network/DAT2-cwl/0fbf50ca5e5b9473383ae0edbdc883e091b0ae42/tool/platanus-b/assemble/test-job.yml"
+        - url: "https://raw.githubusercontent.com/pitagora-network/DAT2-cwl/0e1831eb613375c50fd83d19647d3b101880110c/tool/platanus-b/assemble/test-job.yml"
           target: test-job.yml
           type: wf_params
-        - url: "https://raw.githubusercontent.com/pitagora-network/DAT2-cwl/0fbf50ca5e5b9473383ae0edbdc883e091b0ae42/test/data/DRR024501_1.fastq"
+        - url: "https://raw.githubusercontent.com/pitagora-network/DAT2-cwl/0e1831eb613375c50fd83d19647d3b101880110c/test/data/DRR024501_1.fastq"
           target: DRR024501_1.fastq
           type: other
-        - url: "https://raw.githubusercontent.com/pitagora-network/DAT2-cwl/0fbf50ca5e5b9473383ae0edbdc883e091b0ae42/test/data/DRR024501_2.fastq"
+        - url: "https://raw.githubusercontent.com/pitagora-network/DAT2-cwl/0e1831eb613375c50fd83d19647d3b101880110c/test/data/DRR024501_2.fastq"
           target: DRR024501_2.fastq
           type: other
