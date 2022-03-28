@@ -44,7 +44,6 @@ jobs:
           exit ${PIPESTATUS[0]}
         continue-on-error: true
         env:
-          YEVIS_DEV: 1
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "List test results"
