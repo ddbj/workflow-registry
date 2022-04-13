@@ -1,4 +1,4 @@
-# yevis-workflows
+# DDBJ Workflow Registry
 
 Workflow registry published by [DDBJ](https://www.ddbj.nig.ac.jp/) using [`ddbj/yevis-cli`](https://github.com/ddbj/yevis-cli).
 
