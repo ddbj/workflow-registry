@@ -39,8 +39,11 @@ jobs:
         run: |
           mkdir -p ./test-logs
           SAPPORO_RUN_DIR=${GITHUB_WORKSPACE}/test-results \
-            ./yevis test --verbose --from-pr ${{github.event.pull_request._links.html.href }} 2>&1 \
-            | tee ./test-logs/yevis-log.txt
+            ./yevis test \
+              --verbose \
+              --repository ${{ github.repository }} \
+              --from-pr ${{github.event.pull_request._links.html.href }} \
+              2>&1 | tee ./test-logs/yevis-log.txt
           exit ${PIPESTATUS[0]}
         continue-on-error: true
         env:
@@ -65,7 +68,6 @@ jobs:
           fi
           COMMENT=$(cat <<EOF
           ## Test results
-
           - Test status: ${{ steps.test.outcome }}
           - Test URL: https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}
             - Test logs artifact: yevis-test-logs
