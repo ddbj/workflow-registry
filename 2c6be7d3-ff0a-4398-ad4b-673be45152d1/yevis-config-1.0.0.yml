@@ -5,8 +5,32 @@ license: CC0-1.0
 authors:
   - github_account: inutano
     name: Tazro Inutano Ohta
-    affiliation: "@dbcls "
+    affiliation: "@dbcls"
     orcid: 0000-0003-3777-5945
+  - github_account: suecharo
+    name: Hirotaka Suetake
+    affiliation: "The Universitry of Tokyo"
+    orcid: 
+  - github_account: tom-tan
+    name: Tomoya Tanjo
+    affiliation: "DDBJ"
+    orcid: 
+  - github_account: tfuji
+    name: Takatomo Fujisawa
+    affiliation: "DDBJ"
+    orcid: 
+  - github_account: hacchy1983
+    name: Tsuyoshi Hachiya
+    affiliation: "GAJ"
+    orcid: 
+  - github_account: kozo2
+    name: Kozo Nishida
+    affiliation: "GAJ"
+    orcid: 
+  - github_account: manabuishii
+    name: Manabu Ishii
+    affiliation: "GAJ"
+    orcid: 
 workflow:
   name: "human-reseq: fastqSE2bam"
   readme: "https://raw.githubusercontent.com/ddbj/human-reseq/a1c9cd63c80122d6a831059cdb73ec9a9455af6f/README.md"
