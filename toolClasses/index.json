@@ -1,7 +1,1 @@
-[
-  {
-    "id": "workflow",
-    "name": "Workflow",
-    "description": "A computational workflow"
-  }
-]
+[{"id":"workflow","name":"Workflow","description":"A computational workflow"}]
