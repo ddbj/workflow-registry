@@ -10,27 +10,27 @@ authors:
   - github_account: suecharo
     name: Hirotaka Suetake
     affiliation: "The Universitry of Tokyo"
-    orcid: 
+    orcid: 0000-0003-2765-0049
   - github_account: tom-tan
     name: Tomoya Tanjo
     affiliation: "DDBJ"
-    orcid: 
+    orcid: 0000-0002-4421-9659
   - github_account: tfuji
     name: Takatomo Fujisawa
     affiliation: "DDBJ"
-    orcid: 
+    orcid: 0000-0001-8978-3344
   - github_account: hacchy1983
     name: Tsuyoshi Hachiya
     affiliation: "GAJ"
-    orcid: 
+    orcid: 0000-0002-5274-3266
   - github_account: kozo2
     name: Kozo Nishida
     affiliation: "GAJ"
-    orcid: 
+    orcid: 0000-0001-8501-7319
   - github_account: manabuishii
     name: Manabu Ishii
     affiliation: "GAJ"
-    orcid: 
+    orcid: 0000-0002-5843-4712
 workflow:
   name: "human-reseq: fastqSE2bam"
   readme: "https://raw.githubusercontent.com/ddbj/human-reseq/a1c9cd63c80122d6a831059cdb73ec9a9455af6f/README.md"
