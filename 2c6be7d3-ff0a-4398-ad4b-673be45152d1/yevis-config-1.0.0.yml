@@ -1,0 +1,25 @@
+---
+id: 2c6be7d3-ff0a-4398-ad4b-673be45152d1
+version: 1.0.0
+license: CC0-1.0
+authors:
+  - github_account: inutano
+    name: Tazro Inutano Ohta
+    affiliation: "@dbcls "
+    orcid: 0000-0003-3777-5945
+workflow:
+  name: "human-reseq: fastqSE2bam"
+  readme: "https://raw.githubusercontent.com/ddbj/human-reseq/a1c9cd63c80122d6a831059cdb73ec9a9455af6f/README.md"
+  language:
+    type: CWL
+    version: v1.0
+  files:
+    - url: "https://raw.githubusercontent.com/ddbj/human-reseq/de62022f02e3e4fda36410bf04695c6fd64f942d/packed/fastqSE2bam.packed.cwl"
+      target: fastqSE2bam.cwl
+      type: primary
+  testing:
+    - id: test_1
+      files:
+        - url: "https://raw.githubusercontent.com/ddbj/human-reseq/de62022f02e3e4fda36410bf04695c6fd64f942d/examples/wes/fastqSE2bam.zenodo.yml"
+          target: wf_params.yml
+          type: wf_params
