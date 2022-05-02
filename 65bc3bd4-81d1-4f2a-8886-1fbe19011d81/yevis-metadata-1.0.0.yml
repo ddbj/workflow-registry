@@ -31,19 +31,24 @@ authors:
     name: Manabu Ishii
     affiliation: GAJ
     orcid: 0000-0002-5843-4712
+zenodo:
+  url: "https://zenodo.org/record/6511072"
+  id: 6511072
+  doi: 10.5281/zenodo.6511072
+  concept_doi: 10.5281/zenodo.6511071
 workflow:
   name: "human-reseq: fastqSE2bam"
-  readme: "https://raw.githubusercontent.com/ddbj/human-reseq/a1c9cd63c80122d6a831059cdb73ec9a9455af6f/README.md"
+  readme: "https://zenodo.org/api/files/11e4eba4-f403-49ca-a08d-e1f457bb9361/README.md"
   language:
     type: CWL
     version: v1.0
   files:
-    - url: "https://raw.githubusercontent.com/ddbj/human-reseq/de62022f02e3e4fda36410bf04695c6fd64f942d/packed/fastqSE2bam.packed.cwl"
+    - url: "https://zenodo.org/api/files/11e4eba4-f403-49ca-a08d-e1f457bb9361/fastqSE2bam.cwl"
       target: fastqSE2bam.cwl
       type: primary
   testing:
     - id: test_1
       files:
-        - url: "https://raw.githubusercontent.com/ddbj/human-reseq/de62022f02e3e4fda36410bf04695c6fd64f942d/examples/wes/fastqSE2bam.zenodo.yml"
+        - url: "https://zenodo.org/api/files/11e4eba4-f403-49ca-a08d-e1f457bb9361/wf_params.yml"
           target: wf_params.yml
           type: wf_params
