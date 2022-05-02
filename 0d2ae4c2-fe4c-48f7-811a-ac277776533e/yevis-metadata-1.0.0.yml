@@ -11,19 +11,24 @@ authors:
     name: "Ohta, Tazro"
     affiliation: Database Center for Life Science
     orcid: 0000-0003-3777-5945
+zenodo:
+  url: "https://zenodo.org/record/6511020"
+  id: 6511020
+  doi: 10.5281/zenodo.6511020
+  concept_doi: 10.5281/zenodo.6511019
 workflow:
   name: Pitagora CWL - Download SRA
-  readme: "https://raw.githubusercontent.com/pitagora-network/pitagora-cwl/cd79f2db4b166d205456ab718e2581d6ab6e9f23/README.md"
+  readme: "https://zenodo.org/api/files/2422dda0-1bd9-4109-aa44-53d55fd934de/README.md"
   language:
     type: CWL
     version: v1.0
   files:
-    - url: "https://raw.githubusercontent.com/pitagora-network/pitagora-cwl/cd79f2db4b166d205456ab718e2581d6ab6e9f23/tools/download-sra/download-sra.cwl"
+    - url: "https://zenodo.org/api/files/2422dda0-1bd9-4109-aa44-53d55fd934de/download-sra.cwl"
       target: download-sra.cwl
       type: primary
   testing:
     - id: test_1
       files:
-        - url: "https://raw.githubusercontent.com/pitagora-network/pitagora-cwl/cd79f2db4b166d205456ab718e2581d6ab6e9f23/workflows/download-fastq/download-fastq.yml"
+        - url: "https://zenodo.org/api/files/2422dda0-1bd9-4109-aa44-53d55fd934de/download-fastq.yml"
           target: download-fastq.yml
           type: wf_params
