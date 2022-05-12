@@ -1,9 +1,12 @@
 # DDBJ Workflow Registry
 
+[![DOI](https://zenodo.org/badge/442338369.svg)](https://zenodo.org/badge/latestdoi/442338369)
+[![Apache License](https://img.shields.io/badge/license-Apache%202.0-orange.svg?style=flat&color=important)](http://www.apache.org/licenses/LICENSE-2.0)
+
 Workflow registry published by [DDBJ](https://www.ddbj.nig.ac.jp/) using [`ddbj/yevis-cli`](https://github.com/ddbj/yevis-cli).
 
 A web application [`ddbj/yevis-web`](https://github.com/ddbj/yevis-web) is also available to browse the published workflows.
-See **[https://ddbj.github.io/yevis-web/](https://ddbj.github.io/yevis-web/)**.
+See **[https://ddbj.github.io/workflow-registry-browser/](https://ddbj.github.io/workflow-registry-browser/)**.
 
 ---
 
