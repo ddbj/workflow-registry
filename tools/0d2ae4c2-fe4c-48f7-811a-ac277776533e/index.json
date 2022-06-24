@@ -1,1 +1,27 @@
-{"url":"https://ddbj.github.io/workflow-registry/tools/0d2ae4c2-fe4c-48f7-811a-ac277776533e","id":"0d2ae4c2-fe4c-48f7-811a-ac277776533e","organization":"@suecharo, @inutano","name":"Pitagora CWL - Download SRA","tool_class":{"id":"workflow","name":"Workflow","description":"A computational workflow"},"description":"https://zenodo.org/api/files/2422dda0-1bd9-4109-aa44-53d55fd934de/README.md","has_checker":true,"checker_url":"https://github.com/suecharo/gh-trs","versions":[{"author":["suecharo","inutano"],"name":"Pitagora CWL - Download SRA","url":"https://ddbj.github.io/workflow-registry/tools/0d2ae4c2-fe4c-48f7-811a-ac277776533e/versions/1.0.0","id":"0d2ae4c2-fe4c-48f7-811a-ac277776533e","descriptor_type":["CWL"],"verified":true,"verified_source":["https://github.com/ddbj/workflow-registry/actions/runs/2256980244"]}]}
+{
+  "url": "https://ddbj.github.io/workflow-registry/tools/0d2ae4c2-fe4c-48f7-811a-ac277776533e",
+  "id": "0d2ae4c2-fe4c-48f7-811a-ac277776533e",
+  "organization": "@suecharo, @inutano",
+  "name": "Pitagora CWL - Download SRA",
+  "tool_class": {
+    "id": "workflow",
+    "name": "Workflow",
+    "description": "A computational workflow"
+  },
+  "description": "https://zenodo.org/api/files/2422dda0-1bd9-4109-aa44-53d55fd934de/README.md",
+  "has_checker": true,
+  "checker_url": "https://github.com/ddbj/yevis-cli",
+  "versions": [
+    {
+      "author": ["suecharo", "inutano"],
+      "name": "Pitagora CWL - Download SRA",
+      "url": "https://ddbj.github.io/workflow-registry/tools/0d2ae4c2-fe4c-48f7-811a-ac277776533e/versions/1.0.0",
+      "id": "0d2ae4c2-fe4c-48f7-811a-ac277776533e",
+      "descriptor_type": ["CWL"],
+      "verified": true,
+      "verified_source": [
+        "https://github.com/ddbj/workflow-registry/actions/runs/2256980244"
+      ]
+    }
+  ]
+}
