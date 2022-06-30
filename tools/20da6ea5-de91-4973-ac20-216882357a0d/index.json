@@ -16,7 +16,7 @@
       "author": ["suecharo"],
       "name": "nf-core - rnaseq",
       "url": "https://ddbj.github.io/workflow-registry/tools/20da6ea5-de91-4973-ac20-216882357a0d/versions/1.0.0",
-      "id": "20da6ea5-de91-4973-ac20-216882357a0d",
+      "id": "1.0.0",
       "descriptor_type": ["NFL"],
       "verified": true,
       "verified_source": [

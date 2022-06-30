@@ -1,1 +1,21 @@
-[{"author":["inutano","suecharo","tom-tan","tfuji","hacchy1983","kozo2","manabuishii"],"name":"human-reseq: fastqSE2bam","url":"https://ddbj.github.io/workflow-registry/tools/65bc3bd4-81d1-4f2a-8886-1fbe19011d81/versions/1.0.0","id":"65bc3bd4-81d1-4f2a-8886-1fbe19011d81","descriptor_type":["CWL"],"verified":true,"verified_source":["https://github.com/ddbj/workflow-registry/actions/runs/2257134260"]}]
+[
+  {
+    "author": [
+      "inutano",
+      "suecharo",
+      "tom-tan",
+      "tfuji",
+      "hacchy1983",
+      "kozo2",
+      "manabuishii"
+    ],
+    "name": "human-reseq: fastqSE2bam",
+    "url": "https://ddbj.github.io/workflow-registry/tools/65bc3bd4-81d1-4f2a-8886-1fbe19011d81/versions/1.0.0",
+    "id": "1.0.0",
+    "descriptor_type": ["CWL"],
+    "verified": true,
+    "verified_source": [
+      "https://github.com/ddbj/workflow-registry/actions/runs/2257134260"
+    ]
+  }
+]
