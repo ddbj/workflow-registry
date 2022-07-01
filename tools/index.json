@@ -4,7 +4,7 @@
     "id": "0d2ae4c2-fe4c-48f7-811a-ac277776533e",
     "organization": "@suecharo, @inutano",
     "name": "Pitagora CWL - Download SRA",
-    "tool_class": {
+    "toolclass": {
       "id": "workflow",
       "name": "Workflow",
       "description": "A computational workflow"
@@ -31,7 +31,7 @@
     "id": "65bc3bd4-81d1-4f2a-8886-1fbe19011d81",
     "organization": "@inutano, @suecharo, @tom-tan, @tfuji, @hacchy1983, @kozo2, @manabuishii",
     "name": "human-reseq: fastqSE2bam",
-    "tool_class": {
+    "toolclass": {
       "id": "workflow",
       "name": "Workflow",
       "description": "A computational workflow"
@@ -66,7 +66,7 @@
     "id": "20da6ea5-de91-4973-ac20-216882357a0d",
     "organization": "@suecharo",
     "name": "nf-core - rnaseq",
-    "tool_class": {
+    "toolclass": {
       "id": "workflow",
       "name": "Workflow",
       "description": "A computational workflow"
@@ -93,7 +93,7 @@
     "id": "68c32f9c-bdaa-420c-879c-90b40d8bc4d5",
     "organization": "@suecharo",
     "name": "GATK workflows - Mitochondria Pipeline",
-    "tool_class": {
+    "toolclass": {
       "id": "workflow",
       "name": "Workflow",
       "description": "A computational workflow"

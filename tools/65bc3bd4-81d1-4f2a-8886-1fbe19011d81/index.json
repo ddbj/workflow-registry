@@ -3,7 +3,7 @@
   "id": "65bc3bd4-81d1-4f2a-8886-1fbe19011d81",
   "organization": "@inutano, @suecharo, @tom-tan, @tfuji, @hacchy1983, @kozo2, @manabuishii",
   "name": "human-reseq: fastqSE2bam",
-  "tool_class": {
+  "toolclass": {
     "id": "workflow",
     "name": "Workflow",
     "description": "A computational workflow"

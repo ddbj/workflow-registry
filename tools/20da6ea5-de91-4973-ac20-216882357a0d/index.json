@@ -3,7 +3,7 @@
   "id": "20da6ea5-de91-4973-ac20-216882357a0d",
   "organization": "@suecharo",
   "name": "nf-core - rnaseq",
-  "tool_class": {
+  "toolclass": {
     "id": "workflow",
     "name": "Workflow",
     "description": "A computational workflow"

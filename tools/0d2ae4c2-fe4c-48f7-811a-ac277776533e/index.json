@@ -3,7 +3,7 @@
   "id": "0d2ae4c2-fe4c-48f7-811a-ac277776533e",
   "organization": "@suecharo, @inutano",
   "name": "Pitagora CWL - Download SRA",
-  "tool_class": {
+  "toolclass": {
     "id": "workflow",
     "name": "Workflow",
     "description": "A computational workflow"
