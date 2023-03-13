@@ -1,0 +1,39 @@
+---
+id: 324a6207-70bd-4a59-be2b-25001d1af9e3
+version: 1.0.0
+license: CC0-1.0
+authors:
+  - github_account: manabuishii
+    name: Manabu ISHII
+    affiliation: GAJ
+workflow:
+  name: mutect2
+  readme: "https://raw.githubusercontent.com/broadinstitute/gatk/4ba4ab5900d88da1fcf62615aa038e5806248780/README.md"
+  language:
+    type: WDL
+    version: "1.0"
+  files:
+    - url: "https://raw.githubusercontent.com/broadinstitute/gatk/c4f18e223abcbc19e92b6f9d4bb9268b768723e0/scripts/mutect2_wdl/mutect2.wdl"
+      target: mutect2.wdl
+      type: primary
+  testing:
+    - id: test_1
+      files:
+        - url: "https://dl.dropboxusercontent.com/s/vwl7v0y8qye2zlu/mutect2.input.small.json"
+          target: wf_params.json
+          type: wf_params
+        - url: "https://dl.dropboxusercontent.com/s/w9qd2zcimbl2uop/Homo_sapiens_assembly19.fasta.fai"
+          target: Homo_sapiens_assembly19.fasta.fai
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/umgayi62fmz5i3s/Homo_sapiens_assembly19.fasta"
+          target: Homo_sapiens_assembly19.fasta
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/hqf4awyr8frauqv/Homo_sapiens_assembly19.dict"
+          target: Homo_sapiens_assembly19.dict
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/2p8zv1dwb2u25o6/SM-74NEG.small.bam"
+          target: SM-74NEG.small.bam
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/9r4v912d2b6xn8a/SM-74NEG.small.bam.bai"
+          target: SM-74NEG.small.bam.bai
+          type: other
