@@ -1,0 +1,57 @@
+---
+id: eb668cce-4f38-4543-96ae-411af6aea734
+version: 1.0.0
+license: CC0-1.0
+authors:
+  - github_account: manabuishii
+    name: Manabu ISHII
+    affiliation: GAJ
+workflow:
+  name: bam-to-unmapped-bams
+  readme: "https://raw.githubusercontent.com/gatk-workflows/seq-format-conversion/6b69dde1877de997effedd3388aeaca929db04da/README.md"
+  language:
+    type: WDL
+    version: "1.0"
+  files:
+    - url: "https://raw.githubusercontent.com/gatk-workflows/seq-format-conversion/6b69dde1877de997effedd3388aeaca929db04da/LICENSE"
+      target: LICENSE
+      type: secondary
+    - url: "https://raw.githubusercontent.com/gatk-workflows/seq-format-conversion/6b69dde1877de997effedd3388aeaca929db04da/README.md"
+      target: README.md
+      type: secondary
+    - url: "https://raw.githubusercontent.com/gatk-workflows/seq-format-conversion/6b69dde1877de997effedd3388aeaca929db04da/bam-to-unmapped-bams.inputs.json"
+      target: bam-to-unmapped-bams.inputs.json
+      type: secondary
+    - url: "https://raw.githubusercontent.com/gatk-workflows/seq-format-conversion/6b69dde1877de997effedd3388aeaca929db04da/bam-to-unmapped-bams.wdl"
+      target: bam-to-unmapped-bams.wdl
+      type: primary
+    - url: "https://raw.githubusercontent.com/gatk-workflows/seq-format-conversion/6b69dde1877de997effedd3388aeaca929db04da/cram-to-bam.inputs.json"
+      target: cram-to-bam.inputs.json
+      type: secondary
+    - url: "https://raw.githubusercontent.com/gatk-workflows/seq-format-conversion/6b69dde1877de997effedd3388aeaca929db04da/cram-to-bam.wdl"
+      target: cram-to-bam.wdl
+      type: secondary
+    - url: "https://raw.githubusercontent.com/gatk-workflows/seq-format-conversion/6b69dde1877de997effedd3388aeaca929db04da/generic.google-papi.options.json"
+      target: generic.google-papi.options.json
+      type: secondary
+    - url: "https://raw.githubusercontent.com/gatk-workflows/seq-format-conversion/6b69dde1877de997effedd3388aeaca929db04da/interleaved-fastq-to-paired-fastq.inputs.json"
+      target: interleaved-fastq-to-paired-fastq.inputs.json
+      type: secondary
+    - url: "https://raw.githubusercontent.com/gatk-workflows/seq-format-conversion/6b69dde1877de997effedd3388aeaca929db04da/interleaved-fastq-to-paired-fastq.wdl"
+      target: interleaved-fastq-to-paired-fastq.wdl
+      type: secondary
+    - url: "https://raw.githubusercontent.com/gatk-workflows/seq-format-conversion/6b69dde1877de997effedd3388aeaca929db04da/paired-fastq-to-unmapped-bam.inputs.json"
+      target: paired-fastq-to-unmapped-bam.inputs.json
+      type: secondary
+    - url: "https://raw.githubusercontent.com/gatk-workflows/seq-format-conversion/6b69dde1877de997effedd3388aeaca929db04da/paired-fastq-to-unmapped-bam.wdl"
+      target: paired-fastq-to-unmapped-bam.wdl
+      type: secondary
+  testing:
+    - id: test_1
+      files:
+        - url: "https://dl.dropboxusercontent.com/s/787mffas2qs7l7s/bam-to-unmapped-bams.inputs.small.json"
+          target: wf_params.json
+          type: wf_params
+        - url: "https://dl.dropboxusercontent.com/s/xmx77mbt9hur20i/NA12778.final.small.bam"
+          target: NA12778.final.small.bam
+          type: other
