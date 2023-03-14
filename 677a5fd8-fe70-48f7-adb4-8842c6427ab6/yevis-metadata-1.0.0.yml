@@ -1,0 +1,105 @@
+---
+id: 677a5fd8-fe70-48f7-adb4-8842c6427ab6
+version: 1.0.0
+license: CC0-1.0
+authors:
+  - github_account: manabuishii
+    name: Manabu ISHII
+    affiliation: GAJ
+workflow:
+  name: MitochondriaPipeline
+  readme: "https://raw.githubusercontent.com/broadinstitute/gatk/4ba4ab5900d88da1fcf62615aa038e5806248780/README.md"
+  language:
+    type: WDL
+    version: "1.0"
+  files:
+    - url: "https://raw.githubusercontent.com/broadinstitute/gatk/4ba4ab5900d88da1fcf62615aa038e5806248780/scripts/mitochondria_m2_wdl/AlignAndCall.wdl"
+      target: AlignAndCall.wdl
+      type: secondary
+    - url: "https://raw.githubusercontent.com/broadinstitute/gatk/4ba4ab5900d88da1fcf62615aa038e5806248780/scripts/mitochondria_m2_wdl/AlignmentPipeline.wdl"
+      target: AlignmentPipeline.wdl
+      type: secondary
+    - url: "https://raw.githubusercontent.com/broadinstitute/gatk/4ba4ab5900d88da1fcf62615aa038e5806248780/scripts/mitochondria_m2_wdl/ExampleInputsMitochondriaPipeline.json"
+      target: ExampleInputsMitochondriaPipeline.json
+      type: secondary
+    - url: "https://raw.githubusercontent.com/broadinstitute/gatk/4ba4ab5900d88da1fcf62615aa038e5806248780/scripts/mitochondria_m2_wdl/Haplochecker/Dockerfile"
+      target: Haplochecker/Dockerfile
+      type: secondary
+    - url: "https://raw.githubusercontent.com/broadinstitute/gatk/4ba4ab5900d88da1fcf62615aa038e5806248780/scripts/mitochondria_m2_wdl/MitochondriaPipeline.wdl"
+      target: MitochondriaPipeline.wdl
+      type: primary
+  testing:
+    - id: test_1
+      files:
+        - url: "https://dl.dropboxusercontent.com/s/ls8nj56flwzqm7z/MitochondriaPipeline.input.small.yevis.json"
+          target: wf_params.json
+          type: wf_params
+        - url: "https://dl.dropboxusercontent.com/s/abtunxt1x0vjwg6/blacklist_sites.hg38.chrM.bed"
+          target: blacklist_sites.hg38.chrM.bed
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/wy9370kpnemckr1/blacklist_sites.hg38.chrM.bed.idx"
+          target: blacklist_sites.hg38.chrM.bed.idx
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/h6pfuvgg5eyy90w/control_region_shifted.chrM.interval_list"
+          target: control_region_shifted.chrM.interval_list
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/jzbhsfl9m1e7gnj/Homo_sapiens_assembly38.chrM.fasta.amb"
+          target: Homo_sapiens_assembly38.chrM.fasta.amb
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/jw4jziwa51rtmau/Homo_sapiens_assembly38.chrM.fasta.ann"
+          target: Homo_sapiens_assembly38.chrM.fasta.ann
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/1hwbkj4spado1in/Homo_sapiens_assembly38.chrM.fasta.bwt"
+          target: Homo_sapiens_assembly38.chrM.fasta.bwt
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/xdgrwhsiau5qudg/Homo_sapiens_assembly38.chrM.fasta.pac"
+          target: Homo_sapiens_assembly38.chrM.fasta.pac
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/kdrhlil7uhudlfr/Homo_sapiens_assembly38.chrM.dict"
+          target: Homo_sapiens_assembly38.chrM.dict
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/x1d57oplvp8cq4p/Homo_sapiens_assembly38.chrM.fasta"
+          target: Homo_sapiens_assembly38.chrM.fasta
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/g6xww17xe8054oc/Homo_sapiens_assembly38.chrM.fasta.fai"
+          target: Homo_sapiens_assembly38.chrM.fasta.fai
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/zisecohyqlbp5y2/Homo_sapiens_assembly38.chrM.fasta.sa"
+          target: Homo_sapiens_assembly38.chrM.fasta.sa
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/4g7nd409aq49a0z/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.amb"
+          target: Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.amb
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/ohmc8f88t5ailst/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.ann"
+          target: Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.ann
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/m5mrm34n6vx5s5z/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.bwt"
+          target: Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.bwt
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/ypvhfr14r8dgy5n/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.pac"
+          target: Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.pac
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/r61zgh44isl2jt4/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.dict"
+          target: Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.dict
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/tvwgv3rjzxygu4y/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta"
+          target: Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/frw62lifjotfikj/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.fai"
+          target: Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.fai
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/oabc3ufsmxizny2/Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.sa"
+          target: Homo_sapiens_assembly38.chrM.shifted_by_8000_bases.fasta.sa
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/nol0y5tg25u8a2p/ShiftBack.chain"
+          target: ShiftBack.chain
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/6ey5q5om9s1qd31/non_control_region.interval_list"
+          target: non_control_region.interval_list
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/emr0nidnbltuipd/NA20752_mtsmall.bam"
+          target: NA20752_mtsmall.bam
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/mbvor4xhxzzi4ii/NA20752_mtsmall.bam.bai"
+          target: NA20752_mtsmall.bam.bai
+          type: other
