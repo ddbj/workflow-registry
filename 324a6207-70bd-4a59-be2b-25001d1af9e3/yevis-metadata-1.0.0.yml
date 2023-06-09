@@ -6,34 +6,39 @@ authors:
   - github_account: manabuishii
     name: Manabu ISHII
     affiliation: GAJ
+zenodo:
+  url: "https://zenodo.org/record/8019801"
+  id: 8019801
+  doi: 10.5281/zenodo.8019801
+  concept_doi: 10.5281/zenodo.8019800
 workflow:
   name: mutect2
-  readme: "https://raw.githubusercontent.com/broadinstitute/gatk/4ba4ab5900d88da1fcf62615aa038e5806248780/README.md"
+  readme: "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/README.md"
   language:
     type: WDL
     version: "1.0"
   files:
-    - url: "https://raw.githubusercontent.com/broadinstitute/gatk/c4f18e223abcbc19e92b6f9d4bb9268b768723e0/scripts/mutect2_wdl/mutect2.wdl"
+    - url: "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/mutect2.wdl"
       target: mutect2.wdl
       type: primary
   testing:
     - id: test_1
       files:
-        - url: "https://dl.dropboxusercontent.com/s/vwl7v0y8qye2zlu/mutect2.input.small.json"
+        - url: "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/wf_params.json"
           target: wf_params.json
           type: wf_params
-        - url: "https://dl.dropboxusercontent.com/s/w9qd2zcimbl2uop/Homo_sapiens_assembly19.fasta.fai"
+        - url: "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/Homo_sapiens_assembly19.fasta.fai"
           target: Homo_sapiens_assembly19.fasta.fai
           type: other
-        - url: "https://dl.dropboxusercontent.com/s/umgayi62fmz5i3s/Homo_sapiens_assembly19.fasta"
+        - url: "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/Homo_sapiens_assembly19.fasta"
           target: Homo_sapiens_assembly19.fasta
           type: other
-        - url: "https://dl.dropboxusercontent.com/s/hqf4awyr8frauqv/Homo_sapiens_assembly19.dict"
+        - url: "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/Homo_sapiens_assembly19.dict"
           target: Homo_sapiens_assembly19.dict
           type: other
-        - url: "https://dl.dropboxusercontent.com/s/2p8zv1dwb2u25o6/SM-74NEG.small.bam"
+        - url: "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/SM-74NEG.small.bam"
           target: SM-74NEG.small.bam
           type: other
-        - url: "https://dl.dropboxusercontent.com/s/9r4v912d2b6xn8a/SM-74NEG.small.bam.bai"
+        - url: "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/SM-74NEG.small.bam.bai"
           target: SM-74NEG.small.bam.bai
           type: other
