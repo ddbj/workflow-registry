@@ -1,0 +1,3026 @@
+{
+  "@context": [
+    "https://w3id.org/ro/crate/1.1/context",
+    {
+      "FileStats": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#FileStats",
+      "Format": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#Format",
+      "IntermediateFile": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#IntermediateFile",
+      "OutputFile": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#OutputFile",
+      "SapporoConfiguration": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#SapporoConfiguration",
+      "SapporoService": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#SapporoService",
+      "TestDefinition": "https://w3id.org/ro/terms/test#TestDefinition",
+      "TestEnvironment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#TestEnvironment",
+      "TestInstance": "https://w3id.org/ro/terms/test#TestInstance",
+      "TestResult": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#TestResult",
+      "TestService": "https://w3id.org/ro/terms/test#TestService",
+      "TestSuite": "https://w3id.org/ro/terms/test#TestSuite",
+      "WorkflowAttachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#WorkflowAttachment",
+      "attachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#attachment",
+      "cmd": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#cmd",
+      "configuration": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#configuration",
+      "cpuArchitecture": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#cpuArchitecture",
+      "cpuCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#cpuCount",
+      "definition": "https://w3id.org/ro/terms/test#definition",
+      "duplicateRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#duplicateRate",
+      "duplicateReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#duplicateReads",
+      "engineVersion": "https://w3id.org/ro/terms/test#engineVersion",
+      "environment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#environment",
+      "executableWorkflows": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#executableWorkflows",
+      "exitCode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#exitCode",
+      "format": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#format",
+      "freeDiskSpace": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#freeDiskSpace",
+      "generatedBy": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#generatedBy",
+      "getRuns": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#getRuns",
+      "gid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#gid",
+      "inDocker": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#inDocker",
+      "indelsCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#indelsCount",
+      "instance": "https://w3id.org/ro/terms/test#instance",
+      "intermediateFiles": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#intermediateFiles",
+      "lineCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#lineCount",
+      "mappedRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#mappedRate",
+      "mappedReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#mappedReads",
+      "mode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#mode",
+      "os": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#os",
+      "osVersion": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#osVersion",
+      "outputs": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#outputs",
+      "pid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#pid",
+      "registeredOnlyMode": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#registeredOnlyMode",
+      "resource": "https://w3id.org/ro/terms/test#resource",
+      "result": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#result",
+      "runId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#runId",
+      "runSh": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#runSh",
+      "runsOn": "https://w3id.org/ro/terms/test#runsOn",
+      "sapporoConfig": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#sapporoConfig",
+      "sapporoEndpoint": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#sapporoEndpoint",
+      "serviceInfo": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#serviceInfo",
+      "sha512": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#sha512",
+      "snpsCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#snpsCount",
+      "state": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#state",
+      "stats": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#stats",
+      "stderr": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#stderr",
+      "stdout": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#stdout",
+      "totalMemory": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#totalMemory",
+      "totalReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#totalReads",
+      "uid": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#uid",
+      "unmappedRate": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#unmappedRate",
+      "unmappedReads": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#unmappedReads",
+      "urlPrefix": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#urlPrefix",
+      "variantCount": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#variantCount",
+      "workflowAttachment": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#workflowAttachment",
+      "workflowEngineParameters": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#workflowEngineParameters",
+      "workflowParameters": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#workflowParameters",
+      "yevisId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#yevisId",
+      "yevisMetadata": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#yevisMetadata",
+      "yevisTestId": "https://raw.githubusercontent.com/sapporo-wes/sapporo-service/main/sapporo/ro-terms.csv#yevisTestId"
+    }
+  ],
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "about": {
+        "@id": "#sapporo-test-suite"
+      },
+      "author": {
+        "@id": "https://github.com/manabuishii"
+      },
+      "datePublished": "2023-06-09T08:33:15+00:00",
+      "description": "RO-Crate of Sapporo's run execution results.",
+      "hasPart": [
+        {
+          "@id": "exe/"
+        },
+        {
+          "@id": "outputs/"
+        },
+        {
+          "@id": "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/mutect2.wdl"
+        },
+        {
+          "@id": "service_info.json"
+        },
+        {
+          "@id": "executable_workflows.json"
+        },
+        {
+          "@id": "run.sh"
+        },
+        {
+          "@id": "sapporo_config.json"
+        },
+        {
+          "@id": "run_request.json"
+        },
+        {
+          "@id": "exe/workflow_params.json"
+        },
+        {
+          "@id": "workflow_engine_params.txt"
+        },
+        {
+          "@id": "yevis-metadata.yml"
+        },
+        {
+          "@id": "exe/Homo_sapiens_assembly19.fasta.fai"
+        },
+        {
+          "@id": "exe/Homo_sapiens_assembly19.fasta"
+        },
+        {
+          "@id": "exe/Homo_sapiens_assembly19.dict"
+        },
+        {
+          "@id": "exe/SM-74NEG.small.bam"
+        },
+        {
+          "@id": "exe/SM-74NEG.small.bam.bai"
+        },
+        {
+          "@id": "stdout.log"
+        },
+        {
+          "@id": "stderr.log"
+        },
+        {
+          "@id": "outputs/filtering.stats"
+        },
+        {
+          "@id": "outputs/SM-74NEG.small-filtered.vcf.idx"
+        },
+        {
+          "@id": "outputs/merged.stats"
+        },
+        {
+          "@id": "outputs/SM-74NEG.small-filtered.vcf"
+        },
+        {
+          "@id": "exe/metadata.json"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/Homo_sapiens_assembly19.fasta.fai"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/SM-74NEG.small.bam.bai"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/Homo_sapiens_assembly19.dict"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/SM-74NEG.small.bam"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/Homo_sapiens_assembly19.fasta"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/1761128164/0000-scattered.interval_list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/bamout.bam"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/tumor_name.txt"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/output.vcf"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/docker_cid"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/stdout.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/rc"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/f1r2.tar.gz"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/script"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/glob-33dc6fdaacf3c597568558628abb6bca.list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/script.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/script.submit"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/output.vcf.stats"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/normal_name.txt"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/stdout"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/glob-7ea20f185569d942d8b0cd340b53b5e1.list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/stderr"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/stderr.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/output.vcf.idx"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/glob-33dc6fdaacf3c597568558628abb6bca/cromwell_glob_control_file"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/glob-7ea20f185569d942d8b0cd340b53b5e1/cromwell_glob_control_file"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/tmp.8aa709a7/tmp_read_resource_7995864704543475376.config"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/tmp.8aa709a7/tmp_read_resource_6732838587192686321.config"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/1725183191/SM-74NEG.small-unfiltered.vcf.idx"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/1725183191/SM-74NEG.small-unfiltered.vcf"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/-955792700/Homo_sapiens_assembly19.fasta.fai"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/-955792700/Homo_sapiens_assembly19.dict"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/-955792700/Homo_sapiens_assembly19.fasta"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/-702347564/merged.stats"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/docker_cid"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/stdout.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/rc"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/script"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/filtering.stats"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/script.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/script.submit"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/stdout"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/stderr"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/SM-74NEG.small-filtered.vcf.idx"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/stderr.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/SM-74NEG.small-filtered.vcf"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/tmp.e650053b/tmp_read_resource_5468639361968868332.config"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/inputs/-1352856860/output.vcf"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/inputs/-1352856860/output.vcf.idx"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/SM-74NEG.small-unfiltered.vcf.idx"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/docker_cid"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/stdout.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/SM-74NEG.small-unfiltered.vcf"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/rc"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/script"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/script.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/script.submit"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/stdout"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/stderr"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/stderr.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/inputs/-955792700/Homo_sapiens_assembly19.fasta.fai"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/inputs/-955792700/Homo_sapiens_assembly19.dict"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/inputs/-955792700/Homo_sapiens_assembly19.fasta"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/docker_cid"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/stdout.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/0000-scattered.interval_list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/rc"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/script"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/script.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/script.submit"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/stdout"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/glob-0fc990c5ca95eebc97c4c204e3e303e1.list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/stderr"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/stderr.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/glob-0fc990c5ca95eebc97c4c204e3e303e1/0000-scattered.interval_list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/glob-0fc990c5ca95eebc97c4c204e3e303e1/cromwell_glob_control_file"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/interval-files/0000-scattered.interval_list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/inputs/-1352856860/output.vcf.stats"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/docker_cid"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/stdout.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/rc"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/script"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/script.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/script.submit"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/stdout"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/stderr"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/stderr.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/merged.stats"
+        }
+      ],
+      "mainEntity": {
+        "@id": "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/mutect2.wdl"
+      },
+      "name": "Sapporo RO-Crate"
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/crate/1.1"
+        },
+        {
+          "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+        }
+      ],
+      "license": {
+        "@id": "http://choosealicense.com/licenses/cc0-1.0/"
+      }
+    },
+    {
+      "@id": "http://choosealicense.com/licenses/cc0-1.0/",
+      "@type": [
+        "CreativeWork"
+      ],
+      "name": "Creative Commons Zero v1.0 Universal"
+    },
+    {
+      "@id": "https://github.com/manabuishii",
+      "@type": [
+        "Person"
+      ],
+      "affiliation": "GAJ",
+      "name": "Manabu ISHII"
+    },
+    {
+      "@id": "exe/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "exe/workflow_params.json"
+        },
+        {
+          "@id": "exe/Homo_sapiens_assembly19.fasta.fai"
+        },
+        {
+          "@id": "exe/Homo_sapiens_assembly19.fasta"
+        },
+        {
+          "@id": "exe/Homo_sapiens_assembly19.dict"
+        },
+        {
+          "@id": "exe/SM-74NEG.small.bam"
+        },
+        {
+          "@id": "exe/SM-74NEG.small.bam.bai"
+        },
+        {
+          "@id": "exe/metadata.json"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/Homo_sapiens_assembly19.fasta.fai"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/SM-74NEG.small.bam.bai"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/Homo_sapiens_assembly19.dict"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/SM-74NEG.small.bam"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/Homo_sapiens_assembly19.fasta"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/1761128164/0000-scattered.interval_list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/bamout.bam"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/tumor_name.txt"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/output.vcf"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/docker_cid"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/stdout.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/rc"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/f1r2.tar.gz"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/script"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/glob-33dc6fdaacf3c597568558628abb6bca.list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/script.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/script.submit"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/output.vcf.stats"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/normal_name.txt"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/stdout"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/glob-7ea20f185569d942d8b0cd340b53b5e1.list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/stderr"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/stderr.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/output.vcf.idx"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/glob-33dc6fdaacf3c597568558628abb6bca/cromwell_glob_control_file"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/glob-7ea20f185569d942d8b0cd340b53b5e1/cromwell_glob_control_file"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/tmp.8aa709a7/tmp_read_resource_7995864704543475376.config"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/tmp.8aa709a7/tmp_read_resource_6732838587192686321.config"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/1725183191/SM-74NEG.small-unfiltered.vcf.idx"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/1725183191/SM-74NEG.small-unfiltered.vcf"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/-955792700/Homo_sapiens_assembly19.fasta.fai"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/-955792700/Homo_sapiens_assembly19.dict"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/-955792700/Homo_sapiens_assembly19.fasta"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/-702347564/merged.stats"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/docker_cid"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/stdout.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/rc"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/script"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/filtering.stats"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/script.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/script.submit"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/stdout"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/stderr"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/SM-74NEG.small-filtered.vcf.idx"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/stderr.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/SM-74NEG.small-filtered.vcf"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/tmp.e650053b/tmp_read_resource_5468639361968868332.config"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/inputs/-1352856860/output.vcf"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/inputs/-1352856860/output.vcf.idx"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/SM-74NEG.small-unfiltered.vcf.idx"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/docker_cid"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/stdout.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/SM-74NEG.small-unfiltered.vcf"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/rc"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/script"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/script.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/script.submit"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/stdout"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/stderr"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/stderr.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/inputs/-955792700/Homo_sapiens_assembly19.fasta.fai"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/inputs/-955792700/Homo_sapiens_assembly19.dict"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/inputs/-955792700/Homo_sapiens_assembly19.fasta"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/docker_cid"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/stdout.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/0000-scattered.interval_list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/rc"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/script"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/script.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/script.submit"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/stdout"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/glob-0fc990c5ca95eebc97c4c204e3e303e1.list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/stderr"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/stderr.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/glob-0fc990c5ca95eebc97c4c204e3e303e1/0000-scattered.interval_list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/glob-0fc990c5ca95eebc97c4c204e3e303e1/cromwell_glob_control_file"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/interval-files/0000-scattered.interval_list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/inputs/-1352856860/output.vcf.stats"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/docker_cid"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/stdout.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/rc"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/script"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/script.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/script.submit"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/stdout"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/stderr"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/stderr.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/merged.stats"
+        }
+      ]
+    },
+    {
+      "@id": "outputs/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "outputs/filtering.stats"
+        },
+        {
+          "@id": "outputs/SM-74NEG.small-filtered.vcf.idx"
+        },
+        {
+          "@id": "outputs/merged.stats"
+        },
+        {
+          "@id": "outputs/SM-74NEG.small-filtered.vcf"
+        }
+      ]
+    },
+    {
+      "@id": "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/mutect2.wdl",
+      "@type": [
+        "File",
+        "SoftwareSourceCode",
+        "ComputationalWorkflow"
+      ],
+      "contentSize": 43729,
+      "description": {
+        "@id": "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/README.md"
+      },
+      "encodingFormat": "text/x-c",
+      "lineCount": 1115,
+      "name": "mutect2",
+      "programmingLanguage": {
+        "@id": "#https://openwdl.org"
+      },
+      "sha512": "f208d55385534c9967da78aae95fe1f29ce2d00522e8dabc97ec5fee13af6f16c0b7993b16d9ee7b4b407d35a70c6656b929047aa6e0658fe15bd9b50fb68aec",
+      "version": "1.0.0",
+      "yevisId": "324a6207-70bd-4a59-be2b-25001d1af9e3"
+    },
+    {
+      "@id": "#https://openwdl.org",
+      "@type": "ComputerLanguage",
+      "alternateName": "WDL",
+      "identifier": {
+        "@id": "#https://openwdl.org"
+      },
+      "name": "Workflow Description Language",
+      "url": {
+        "@id": "#https://openwdl.org"
+      },
+      "version": "1.0"
+    },
+    {
+      "@id": "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/README.md",
+      "@type": [
+        "WebPage"
+      ],
+      "name": "README.md"
+    },
+    {
+      "@id": "#sapporo-test-suite",
+      "@type": "TestSuite",
+      "definition": {
+        "@id": "run_request.json"
+      },
+      "instance": {
+        "@id": "#sapporo-test-instance"
+      },
+      "mainEntity": {
+        "@id": "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/mutect2.wdl"
+      },
+      "name": "Sapporo test suite",
+      "result": {
+        "@id": "#sapporo-test-result"
+      }
+    },
+    {
+      "@id": "#sapporo-test-instance",
+      "@type": "TestInstance",
+      "environment": {
+        "@id": "#sapporo-test-environment"
+      },
+      "name": "Sapporo test instance",
+      "runsOn": {
+        "@id": "#sapporo-service"
+      },
+      "url": "http://localhost:1122"
+    },
+    {
+      "@id": "#sapporo-service",
+      "@type": [
+        "TestService",
+        "SapporoService",
+        "SoftwareApplication"
+      ],
+      "configuration": {
+        "@id": "#sapporo-config"
+      },
+      "name": "Sapporo-service",
+      "resource": "/",
+      "url": {
+        "@id": "https://github.com/sapporo-wes/sapporo-service"
+      },
+      "version": "1.4.9"
+    },
+    {
+      "@id": "https://github.com/sapporo-wes/sapporo-service",
+      "@type": [
+        "WebPage"
+      ]
+    },
+    {
+      "@id": "#sapporo-config",
+      "@type": [
+        "SapporoConfiguration"
+      ],
+      "executableWorkflows": {
+        "@id": "executable_workflows.json"
+      },
+      "getRuns": true,
+      "registeredOnlyMode": false,
+      "runSh": {
+        "@id": "run.sh"
+      },
+      "sapporoConfig": {
+        "@id": "sapporo_config.json"
+      },
+      "sapporoEndpoint": "http://localhost:1122",
+      "serviceInfo": {
+        "@id": "service_info.json"
+      },
+      "urlPrefix": "/",
+      "workflowAttachment": true
+    },
+    {
+      "@id": "service_info.json",
+      "@type": "File",
+      "contentSize": 1632,
+      "dateModified": "2023-06-09T07:57:23.445003",
+      "encodingFormat": "application/json",
+      "gid": 0,
+      "lineCount": 83,
+      "mode": "-rw-r--r--",
+      "name": "Sapporo service info",
+      "sha512": "63b75e3740bb06a99fced06b2b7e714229d3d46b01e634ae99f70630816b9bcf2ab2da4e32296a1159667a5bfaea86176faf2b8d3fec1a16b2a2020d8956f409",
+      "text": "{\n  \"workflow_type_versions\": {\n    \"CWL\": {\n      \"workflow_type_version\": [\n        \"v1.0\",\n        \"v1.1\",\n        \"v1.2\"\n      ]\n    },\n    \"WDL\": {\n      \"workflow_type_version\": [\n        \"1.0\"\n      ]\n    },\n    \"NFL\": {\n      \"workflow_type_version\": [\n        \"1.0\",\n        \"DSL2\"\n      ]\n    },\n    \"SMK\": {\n      \"workflow_type_version\": [\n        \"1.0\"\n      ]\n    },\n    \"StreamFlow\": {\n      \"workflow_type_version\": [\n        \"v1.0\"\n      ]\n    }\n  },\n  \"supported_filesystem_protocols\": [\n    \"http\",\n    \"https\",\n    \"file\",\n    \"s3\"\n  ],\n  \"default_workflow_engine_parameters\": {\n    \"nextflow\": [\n      {\n        \"name\": \"-dsl1\",\n        \"type\": \"str\",\n        \"default_value\": \"\"\n      }\n    ],\n    \"snakemake\": [\n      {\n        \"name\": \"--cores\",\n        \"type\": \"int\",\n        \"default_value\": 1\n      },\n      {\n        \"name\": \"--use-conda\",\n        \"type\": \"str\",\n        \"default_value\": \"\"\n      }\n    ]\n  },\n  \"workflow_engine_versions\": {\n    \"cwltool\": \"3.1.20220628170238\",\n    \"nextflow\": \"22.04.4\",\n    \"toil (experimental)\": \"4.1.0\",\n    \"cromwell\": \"80\",\n    \"snakemake\": \"v7.8.3\",\n    \"ep3 (experimental)\": \"v1.7.0\",\n    \"streamflow\": \"0.1.3\"\n  },\n  \"auth_instructions_url\": \"https://github.com/sapporo-wes/sapporo-service\",\n  \"contact_info_url\": \"https://github.com/sapporo-wes/sapporo-service\",\n  \"tags\": {\n    \"wes-name\": \"sapporo\",\n    \"sapporo-version\": \"1.4.9\",\n    \"news_content\": \"\",\n    \"get_runs\": true,\n    \"workflow_attachment\": true,\n    \"registered_only_mode\": false\n  },\n  \"supported_wes_versions\": [\n    \"sapporo-wes-1.0.1\"\n  ],\n  \"system_state_counts\": {\n    \"UNKNOWN\": 1\n  }\n}",
+      "uid": 0
+    },
+    {
+      "@id": "executable_workflows.json",
+      "@type": "File",
+      "contentSize": 33024,
+      "dateModified": "2023-06-09T07:57:25.549009",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 650,
+      "mode": "-rw-r--r--",
+      "name": "Sapporo executable workflows",
+      "sha512": "186d6d93ed49399c525e4541e2259da3d6b6a5cc6cfe76489930061add95affad25477d286ede26aa56d81f7fb4b0a452202715bb2a4611ee1e7c8912d60443d",
+      "uid": 0
+    },
+    {
+      "@id": "run.sh",
+      "@type": "File",
+      "contentSize": 11327,
+      "dateModified": "2023-06-09T07:57:25.549009",
+      "encodingFormat": "text/x-shellscript",
+      "gid": 0,
+      "lineCount": 307,
+      "mode": "-rw-r--r--",
+      "name": "Sapporo run.sh",
+      "sha512": "b0f968d72e5722befba64719731849f574ab20f7a3c2cd0ab8165457c629cedbcc88b0d4392d812533ac6c6316647e9a089339e57269332c40f04674842d84b9",
+      "uid": 0
+    },
+    {
+      "@id": "sapporo_config.json",
+      "@type": "File",
+      "contentSize": 441,
+      "dateModified": "2023-06-09T07:57:23.445003",
+      "encodingFormat": "application/json",
+      "gid": 0,
+      "lineCount": 10,
+      "mode": "-rw-r--r--",
+      "name": "Sapporo runtime configuration",
+      "sha512": "e14130e9a59dc8e1ad8da08c9ef4cc1c85460a8c90b1131d02a916f7c72e27be78135737b23f0b762f6fdee06c72392ddaf45ec8da6b2ca8b516bde375f83a3d",
+      "text": "{\n  \"sapporo_version\": \"1.4.9\",\n  \"get_runs\": true,\n  \"workflow_attachment\": true,\n  \"registered_only_mode\": false,\n  \"service_info\": \"/usr/local/lib/python3.8/site-packages/sapporo/service-info.json\",\n  \"executable_workflows\": \"/usr/local/lib/python3.8/site-packages/sapporo/executable_workflows.json\",\n  \"run_sh\": \"/usr/local/lib/python3.8/site-packages/sapporo/run.sh\",\n  \"url_prefix\": \"/\",\n  \"sapporo_endpoint\": \"http://localhost:1122\"\n}",
+      "uid": 0
+    },
+    {
+      "@id": "#sapporo-test-environment",
+      "@type": [
+        "TestEnvironment"
+      ],
+      "cpuArchitecture": "x86_64",
+      "cpuCount": 2,
+      "freeDiskSpace": 12635344896,
+      "gid": 0,
+      "inDocker": true,
+      "os": "Linux",
+      "osVersion": "5.15.0-1038-azure",
+      "totalMemory": 7281283072,
+      "uid": 0
+    },
+    {
+      "@id": "run_request.json",
+      "@type": [
+        "TestDefinition",
+        "File"
+      ],
+      "cmd": "docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /home/runner/work/workflow-registry/workflow-registry/test-results/e7/e7cbf7ca-10bc-484e-a21d-872bd683d40c:/home/runner/work/workflow-registry/workflow-registry/test-results/e7/e7cbf7ca-10bc-484e-a21d-872bd683d40c -v /tmp:/tmp -v /usr/bin/docker:/usr/bin/docker -w=/home/runner/work/workflow-registry/workflow-registry/test-results/e7/e7cbf7ca-10bc-484e-a21d-872bd683d40c/exe broadinstitute/cromwell:80 run https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/mutect2.wdl -i /home/runner/work/workflow-registry/workflow-registry/test-results/e7/e7cbf7ca-10bc-484e-a21d-872bd683d40c/exe/workflow_params.json -m /home/runner/work/workflow-registry/workflow-registry/test-results/e7/e7cbf7ca-10bc-484e-a21d-872bd683d40c/exe/metadata.json --type WDL --type-version 1.0 1>/home/runner/work/workflow-registry/workflow-registry/test-results/e7/e7cbf7ca-10bc-484e-a21d-872bd683d40c/stdout.log 2>/home/runner/work/workflow-registry/workflow-registry/test-results/e7/e7cbf7ca-10bc-484e-a21d-872bd683d40c/stderr.log",
+      "conformsTo": {
+        "@id": "#cromwell"
+      },
+      "contentSize": 1560,
+      "dateModified": "2023-06-09T07:57:23.445003",
+      "encodingFormat": "application/json",
+      "engineVersion": "80",
+      "gid": 0,
+      "input": [
+        {
+          "@id": "exe/Homo_sapiens_assembly19.fasta.fai"
+        },
+        {
+          "@id": "exe/Homo_sapiens_assembly19.fasta"
+        },
+        {
+          "@id": "exe/Homo_sapiens_assembly19.dict"
+        },
+        {
+          "@id": "exe/SM-74NEG.small.bam"
+        },
+        {
+          "@id": "exe/SM-74NEG.small.bam.bai"
+        }
+      ],
+      "lineCount": 10,
+      "mode": "-rw-r--r--",
+      "name": "Sapporo run request",
+      "sha512": "c89db6ff7cdece77b0ecb7a0bafc9173bd1f04a5a88b38ede3d751535f9fa1210324998a1c27ce8dac239b8ed269dbbf0768e3a21a8c2a13fd5fa595f20ac416",
+      "text": "{\n  \"workflow_params\": \"{\\n\\\"Mutect2.ref_fasta\\\" : \\\"./Homo_sapiens_assembly19.fasta\\\",\\n\\\"Mutect2.ref_fai\\\" :\\\"./Homo_sapiens_assembly19.fasta.fai\\\",\\n\\\"Mutect2.gatk_docker\\\":\\\"broadinstitute/gatk:4.2.4.0\\\",\\n\\\"Mutect2.ref_dict\\\" : \\\"./Homo_sapiens_assembly19.dict\\\",\\n\\\"Mutect2.scatter_count\\\":1,\\n\\\"Mutect2.small_task_mem\\\":3,\\n\\\"Mutect2.tumor_reads\\\": \\\"./SM-74NEG.small.bam\\\",\\n\\\"Mutect2.tumor_reads_index\\\": \\\"./SM-74NEG.small.bam.bai\\\"\\n}\\n\",\n  \"workflow_type\": \"WDL\",\n  \"workflow_type_version\": \"1.0\",\n  \"tags\": null,\n  \"workflow_engine_name\": \"cromwell\",\n  \"workflow_engine_parameters\": \"{}\",\n  \"workflow_url\": \"https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/mutect2.wdl\",\n  \"workflow_name\": null,\n  \"workflow_attachment\": \"[{\\\"file_name\\\": \\\"Homo_sapiens_assembly19.fasta.fai\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/Homo_sapiens_assembly19.fasta.fai\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly19.fasta\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/Homo_sapiens_assembly19.fasta\\\"}, {\\\"file_name\\\": \\\"Homo_sapiens_assembly19.dict\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/Homo_sapiens_assembly19.dict\\\"}, {\\\"file_name\\\": \\\"SM-74NEG.small.bam\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/SM-74NEG.small.bam\\\"}, {\\\"file_name\\\": \\\"SM-74NEG.small.bam.bai\\\", \\\"file_url\\\": \\\"https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/SM-74NEG.small.bam.bai\\\"}]\"\n}",
+      "uid": 0,
+      "workflowEngineParameters": {
+        "@id": "workflow_engine_params.txt"
+      },
+      "workflowParameters": {
+        "@id": "exe/workflow_params.json"
+      },
+      "yevisMetadata": {
+        "@id": "yevis-metadata.yml"
+      },
+      "yevisTestId": "test_1"
+    },
+    {
+      "@id": "exe/workflow_params.json",
+      "@type": [
+        "File"
+      ],
+      "contentSize": 385,
+      "dateModified": "2023-06-09T07:57:23.445003",
+      "encodingFormat": "application/json",
+      "gid": 0,
+      "lineCount": 10,
+      "mode": "-rw-r--r--",
+      "name": "Sapporo workflow parameters",
+      "sha512": "2b9cc8034bc2b856262e94deccf113d1229b9345b6208d8331456214c5296aa8502c5d6ccca69d0220ba90cbd25230c8118abdde534359f30fe0f8420fec2b43",
+      "text": "{\n\"Mutect2.ref_fasta\" : \"./Homo_sapiens_assembly19.fasta\",\n\"Mutect2.ref_fai\" :\"./Homo_sapiens_assembly19.fasta.fai\",\n\"Mutect2.gatk_docker\":\"broadinstitute/gatk:4.2.4.0\",\n\"Mutect2.ref_dict\" : \"./Homo_sapiens_assembly19.dict\",\n\"Mutect2.scatter_count\":1,\n\"Mutect2.small_task_mem\":3,\n\"Mutect2.tumor_reads\": \"./SM-74NEG.small.bam\",\n\"Mutect2.tumor_reads_index\": \"./SM-74NEG.small.bam.bai\"\n}\n",
+      "uid": 0,
+      "url": "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/wf_params.json"
+    },
+    {
+      "@id": "workflow_engine_params.txt",
+      "@type": [
+        "File"
+      ],
+      "contentSize": 0,
+      "dateModified": "2023-06-09T07:57:23.445003",
+      "encodingFormat": "inode/x-empty",
+      "gid": 0,
+      "lineCount": 0,
+      "mode": "-rw-r--r--",
+      "name": "Sapporo workflow engine parameters",
+      "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+      "text": "",
+      "uid": 0
+    },
+    {
+      "@id": "yevis-metadata.yml",
+      "@type": [
+        "File"
+      ],
+      "contentSize": 1557,
+      "dateModified": "2023-06-09T07:57:25.549009",
+      "encodingFormat": "application/json",
+      "gid": 0,
+      "lineCount": 0,
+      "mode": "-rw-r--r--",
+      "name": "Yevis metadata",
+      "sha512": "f917a606cd7933ada8c19b96c12f989585beef9c58de3c1c518dd1b5739ddd6a56c021592fa465e73428496ed24ad7caef24368426a620300432491853547b24",
+      "text": "{\"id\":\"324a6207-70bd-4a59-be2b-25001d1af9e3\",\"version\":\"1.0.0\",\"license\":\"CC0-1.0\",\"authors\":[{\"github_account\":\"manabuishii\",\"name\":\"Manabu ISHII\",\"affiliation\":\"GAJ\"}],\"zenodo\":{\"url\":\"https://zenodo.org/record/8019801\",\"id\":8019801,\"doi\":\"10.5281/zenodo.8019801\",\"concept_doi\":\"10.5281/zenodo.8019800\"},\"workflow\":{\"name\":\"mutect2\",\"readme\":\"https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/README.md\",\"language\":{\"type\":\"WDL\",\"version\":\"1.0\"},\"files\":[{\"url\":\"https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/mutect2.wdl\",\"target\":\"mutect2.wdl\",\"type\":\"primary\"}],\"testing\":[{\"id\":\"test_1\",\"files\":[{\"url\":\"https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/wf_params.json\",\"target\":\"wf_params.json\",\"type\":\"wf_params\"},{\"url\":\"https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/Homo_sapiens_assembly19.fasta.fai\",\"target\":\"Homo_sapiens_assembly19.fasta.fai\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/Homo_sapiens_assembly19.fasta\",\"target\":\"Homo_sapiens_assembly19.fasta\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/Homo_sapiens_assembly19.dict\",\"target\":\"Homo_sapiens_assembly19.dict\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/SM-74NEG.small.bam\",\"target\":\"SM-74NEG.small.bam\",\"type\":\"other\"},{\"url\":\"https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/SM-74NEG.small.bam.bai\",\"target\":\"SM-74NEG.small.bam.bai\",\"type\":\"other\"}]}]}}",
+      "uid": 0
+    },
+    {
+      "@id": "https://cromwell.readthedocs.io/en/stable/",
+      "@type": [
+        "WebPage"
+      ]
+    },
+    {
+      "@id": "#cromwell",
+      "@type": "SoftwareApplication",
+      "name": "cromwell",
+      "url": {
+        "@id": "https://cromwell.readthedocs.io/en/stable/"
+      },
+      "version": "80"
+    },
+    {
+      "@id": "exe/Homo_sapiens_assembly19.fasta.fai",
+      "@type": [
+        "File",
+        "FormalParameter"
+      ],
+      "contentSize": 2780,
+      "dateModified": "2023-06-09T07:57:27.161014",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 85,
+      "mode": "-rw-r--r--",
+      "sha512": "0b184aa069e60c18da41464ea1f8929ecea2c3c1678ca1f7214472ced056eacddf8768fb6e090037c192a7cc2a0ca55a2b3dd629b99cd0be229e6f6728fe39a8",
+      "text": "1\t249250621\t52\t80\t81\n2\t243199373\t252366358\t80\t81\n3\t198022430\t498605776\t80\t81\n4\t191154276\t699103539\t80\t81\n5\t180915260\t892647296\t80\t81\n6\t171115067\t1075824049\t80\t81\n7\t159138663\t1249078107\t80\t81\n8\t146364022\t1410206056\t80\t81\n9\t141213431\t1558399681\t80\t81\n10\t135534747\t1701378334\t80\t81\n11\t135006516\t1838607320\t80\t81\n12\t133851895\t1975301472\t80\t81\n13\t115169878\t2110826570\t80\t81\n14\t107349540\t2227436126\t80\t81\n15\t102531392\t2336127590\t80\t81\n16\t90354753\t2439940678\t80\t81\n17\t81195210\t2531424919\t80\t81\n18\t78077248\t2613635123\t80\t81\n19\t59128983\t2692688390\t80\t81\n20\t63025520\t2752556539\t80\t81\n21\t48129895\t2816369931\t80\t81\n22\t51304566\t2865101503\t80\t81\nX\t155270560\t2917047429\t80\t81\nY\t59373566\t3074258928\t80\t81\nMT\t16569\t3134374742\t80\t81\nGL000207.1\t4262\t3134391580\t80\t81\nGL000226.1\t15008\t3134395958\t80\t81\nGL000229.1\t19913\t3134411216\t80\t81\nGL000231.1\t27386\t3134431440\t80\t81\nGL000210.1\t27682\t3134459231\t80\t81\nGL000239.1\t33824\t3134487322\t80\t81\nGL000235.1\t34474\t3134521631\t80\t81\nGL000201.1\t36148\t3134556598\t80\t81\nGL000247.1\t36422\t3134593260\t80\t81\nGL000245.1\t36651\t3134630200\t80\t81\nGL000197.1\t37175\t3134667372\t80\t81\nGL000203.1\t37498\t3134705074\t80\t81\nGL000246.1\t38154\t3134743103\t80\t81\nGL000249.1\t38502\t3134781796\t80\t81\nGL000196.1\t38914\t3134820842\t80\t81\nGL000248.1\t39786\t3134860305\t80\t81\nGL000244.1\t39929\t3134900651\t80\t81\nGL000238.1\t39939\t3134941142\t80\t81\nGL000202.1\t40103\t3134981643\t80\t81\nGL000234.1\t40531\t3135022310\t80\t81\nGL000232.1\t40652\t3135063410\t80\t81\nGL000206.1\t41001\t3135104633\t80\t81\nGL000240.1\t41933\t3135146209\t80\t81\nGL000236.1\t41934\t3135188729\t80\t81\nGL000241.1\t42152\t3135231250\t80\t81\nGL000243.1\t43341\t3135273991\t80\t81\nGL000242.1\t43523\t3135317936\t80\t81\nGL000230.1\t43691\t3135362066\t80\t81\nGL000237.1\t45867\t3135406366\t80\t81\nGL000233.1\t45941\t3135452869\t80\t81\nGL000204.1\t81310\t3135499447\t80\t81\nGL000198.1\t90085\t3135581836\t80\t81\nGL000208.1\t92689\t3135673110\t80\t81\nGL000191.1\t106433\t3135767021\t80\t81\nGL000227.1\t128374\t3135874848\t80\t81\nGL000228.1\t129120\t3136004890\t80\t81\nGL000214.1\t137718\t3136135687\t80\t81\nGL000221.1\t155397\t3136275190\t80\t81\nGL000209.1\t159169\t3136432593\t80\t81\nGL000218.1\t161147\t3136593815\t80\t81\nGL000220.1\t161802\t3136757040\t80\t81\nGL000213.1\t164239\t3136920928\t80\t81\nGL000211.1\t166566\t3137087283\t80\t81\nGL000199.1\t169874\t3137255995\t80\t81\nGL000217.1\t172149\t3137428056\t80\t81\nGL000216.1\t172294\t3137602420\t80\t81\nGL000215.1\t172545\t3137776931\t80\t81\nGL000205.1\t174588\t3137951696\t80\t81\nGL000219.1\t179198\t3138128530\t80\t81\nGL000224.1\t179693\t3138310031\t80\t81\nGL000223.1\t180455\t3138492034\t80\t81\nGL000195.1\t182896\t3138674808\t80\t81\nGL000212.1\t186858\t3138860054\t80\t81\nGL000222.1\t186861\t3139049311\t80\t81\nGL000200.1\t187035\t3139238571\t80\t81\nGL000193.1\t189789\t3139428007\t80\t81\nGL000194.1\t191469\t3139620232\t80\t81\nGL000225.1\t211173\t3139814158\t80\t81\nGL000192.1\t547496\t3140028034\t80\t81\nNC_007605\t171823\t3140582410\t80\t81\n",
+      "uid": 0,
+      "url": "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/Homo_sapiens_assembly19.fasta.fai"
+    },
+    {
+      "@id": "http://edamontology.org/format_1929",
+      "@type": [
+        "Format"
+      ],
+      "name": "FASTA format including NCBI-style IDs."
+    },
+    {
+      "@id": "exe/Homo_sapiens_assembly19.fasta",
+      "@type": [
+        "File",
+        "FormalParameter"
+      ],
+      "contentSize": 3140756381,
+      "dateModified": "2023-06-09T08:16:14.002458",
+      "encodingFormat": "text/plain",
+      "format": {
+        "@id": "http://edamontology.org/format_1929"
+      },
+      "gid": 0,
+      "lineCount": 38774835,
+      "mode": "-rw-r--r--",
+      "sha512": "4a004a05c17ef82bd53b5b904eca543bc11a99007752ffa09b184ba659e7db0f7f0f52ecf9e8183155a89688c17f2b0df43f3b3c246083b33bf519f5a1ecdcb3",
+      "uid": 0,
+      "url": "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/Homo_sapiens_assembly19.fasta"
+    },
+    {
+      "@id": "exe/Homo_sapiens_assembly19.dict",
+      "@type": [
+        "File",
+        "FormalParameter"
+      ],
+      "contentSize": 14811,
+      "dateModified": "2023-06-09T08:16:15.294460",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 86,
+      "mode": "-rw-r--r--",
+      "sha512": "e6525c9882aa6bba55035958652e812214243fe78e0a8af7d0b0a9187b33aa736a78e97c4f9ba4959a516a8f2eeb7aea5e093e760720b23654ce916a06325f1c",
+      "uid": 0,
+      "url": "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/Homo_sapiens_assembly19.dict"
+    },
+    {
+      "@id": "http://edamontology.org/format_2572",
+      "@type": [
+        "Format"
+      ],
+      "name": "BAM format, the binary, BGZF-formatted compressed version of SAM format for alignment of nucleotide sequences (e.g. sequencing reads) to (a) reference sequence(s). May contain base-call and alignment qualities and other data."
+    },
+    {
+      "@id": "exe/SM-74NEG.small.bam",
+      "@type": [
+        "File",
+        "FormalParameter"
+      ],
+      "contentSize": 5554,
+      "dateModified": "2023-06-09T08:16:16.762462",
+      "encodingFormat": "application/gzip",
+      "format": {
+        "@id": "http://edamontology.org/format_2572"
+      },
+      "gid": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "25eb0f988587c4bdb39f5643879a6b3ccabb815a8535050fa534edf77e04409a872a4e1e9bb9cf996974fae34517f9ebceaa0a821c635bad9ab497702048af76",
+      "uid": 0,
+      "url": "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/SM-74NEG.small.bam"
+    },
+    {
+      "@id": "exe/SM-74NEG.small.bam.bai",
+      "@type": [
+        "File",
+        "FormalParameter"
+      ],
+      "contentSize": 696,
+      "dateModified": "2023-06-09T08:16:18.114465",
+      "encodingFormat": "application/octet-stream",
+      "gid": 0,
+      "lineCount": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "776b2567c914cff201099e193114b8a85845c534345461aa9e246b43f476d0bb51af596f99d590e5f74fcb19d1903eb3a4a632e2f5cc6d94fd3eb5d40a6d58b3",
+      "text": "BAI\u0001U\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+      "uid": 0,
+      "url": "https://zenodo.org/api/files/b46e9f32-49d8-4d1c-8adf-f116e3bd2da2/SM-74NEG.small.bam.bai"
+    },
+    {
+      "@id": "#sapporo-test-result",
+      "@type": [
+        "TestResult"
+      ],
+      "endTime": "2023-06-09T08:33:14",
+      "exitCode": 0,
+      "intermediateFiles": [
+        {
+          "@id": "exe/metadata.json"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/Homo_sapiens_assembly19.fasta.fai"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/SM-74NEG.small.bam.bai"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/Homo_sapiens_assembly19.dict"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/SM-74NEG.small.bam"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/Homo_sapiens_assembly19.fasta"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/1761128164/0000-scattered.interval_list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/bamout.bam"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/tumor_name.txt"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/output.vcf"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/docker_cid"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/stdout.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/rc"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/f1r2.tar.gz"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/script"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/glob-33dc6fdaacf3c597568558628abb6bca.list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/script.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/script.submit"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/output.vcf.stats"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/normal_name.txt"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/stdout"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/glob-7ea20f185569d942d8b0cd340b53b5e1.list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/stderr"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/stderr.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/output.vcf.idx"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/glob-33dc6fdaacf3c597568558628abb6bca/cromwell_glob_control_file"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/glob-7ea20f185569d942d8b0cd340b53b5e1/cromwell_glob_control_file"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/tmp.8aa709a7/tmp_read_resource_7995864704543475376.config"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/tmp.8aa709a7/tmp_read_resource_6732838587192686321.config"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/1725183191/SM-74NEG.small-unfiltered.vcf.idx"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/1725183191/SM-74NEG.small-unfiltered.vcf"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/-955792700/Homo_sapiens_assembly19.fasta.fai"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/-955792700/Homo_sapiens_assembly19.dict"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/-955792700/Homo_sapiens_assembly19.fasta"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/-702347564/merged.stats"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/docker_cid"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/stdout.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/rc"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/script"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/filtering.stats"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/script.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/script.submit"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/stdout"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/stderr"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/SM-74NEG.small-filtered.vcf.idx"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/stderr.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/SM-74NEG.small-filtered.vcf"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/tmp.e650053b/tmp_read_resource_5468639361968868332.config"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/inputs/-1352856860/output.vcf"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/inputs/-1352856860/output.vcf.idx"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/SM-74NEG.small-unfiltered.vcf.idx"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/docker_cid"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/stdout.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/SM-74NEG.small-unfiltered.vcf"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/rc"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/script"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/script.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/script.submit"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/stdout"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/stderr"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/stderr.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/inputs/-955792700/Homo_sapiens_assembly19.fasta.fai"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/inputs/-955792700/Homo_sapiens_assembly19.dict"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/inputs/-955792700/Homo_sapiens_assembly19.fasta"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/docker_cid"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/stdout.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/0000-scattered.interval_list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/rc"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/script"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/script.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/script.submit"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/stdout"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/glob-0fc990c5ca95eebc97c4c204e3e303e1.list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/stderr"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/stderr.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/glob-0fc990c5ca95eebc97c4c204e3e303e1/0000-scattered.interval_list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/glob-0fc990c5ca95eebc97c4c204e3e303e1/cromwell_glob_control_file"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/interval-files/0000-scattered.interval_list"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/inputs/-1352856860/output.vcf.stats"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/docker_cid"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/stdout.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/rc"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/script"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/script.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/script.submit"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/stdout"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/stderr"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/stderr.background"
+        },
+        {
+          "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/merged.stats"
+        }
+      ],
+      "name": "Sapporo test result",
+      "outputs": [
+        {
+          "@id": "outputs/filtering.stats"
+        },
+        {
+          "@id": "outputs/SM-74NEG.small-filtered.vcf.idx"
+        },
+        {
+          "@id": "outputs/merged.stats"
+        },
+        {
+          "@id": "outputs/SM-74NEG.small-filtered.vcf"
+        }
+      ],
+      "pid": 12,
+      "runId": "e7cbf7ca-10bc-484e-a21d-872bd683d40c",
+      "startTime": "2023-06-09T08:16:18",
+      "state": "COMPLETE",
+      "stderr": {
+        "@id": "stderr.log"
+      },
+      "stdout": {
+        "@id": "stdout.log"
+      }
+    },
+    {
+      "@id": "stdout.log",
+      "@type": "File",
+      "contentSize": 46180,
+      "dateModified": "2023-06-09T08:33:13.579200",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 476,
+      "mode": "-rw-r--r--",
+      "name": "Sapporo stdout",
+      "sha512": "f39c13d1213bb4eadd367d0742965ec5b37a0976ff63e345516ba50415b555ca8a91a29a0f38f364682c5444b477af15762a40059aed9144ead869c30a0eeeaf",
+      "uid": 0
+    },
+    {
+      "@id": "stderr.log",
+      "@type": "File",
+      "contentSize": 69116,
+      "dateModified": "2023-06-09T08:33:14.783201",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 1102,
+      "mode": "-rw-r--r--",
+      "name": "Sapporo stderr",
+      "sha512": "9a7dad7ce7c6b267191b26ce3f559cc09dfff8bb6fe747bea6fc70958f8a800e51feda5363ad4e5e4bb6b7a7cfe19eec73590e0aea60e03b1816bec0ec6efe0e",
+      "uid": 0
+    },
+    {
+      "@id": "outputs/filtering.stats",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "OutputFile"
+      ],
+      "contentSize": 1583,
+      "dateModified": "2023-06-09T08:33:14.215201",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 27,
+      "mode": "-rw-r--r--",
+      "sha512": "8eaba0f6e42eec9c54d12f46d3c22d511488474ad7ad25d5021bef7f1af4d826c86410e6f666e848efaeab08b6a7cd402317ac8dbba9a8b84a8f6d3b6c9c542c",
+      "text": "#<METADATA>Ln prior of deletion of length 10=-16.11809565095832\n#<METADATA>Ln prior of deletion of length 9=-16.11809565095832\n#<METADATA>Ln prior of deletion of length 8=-16.11809565095832\n#<METADATA>Ln prior of deletion of length 7=-16.11809565095832\n#<METADATA>Ln prior of deletion of length 6=-16.11809565095832\n#<METADATA>Ln prior of deletion of length 5=-16.11809565095832\n#<METADATA>Ln prior of deletion of length 4=-16.11809565095832\n#<METADATA>Ln prior of deletion of length 3=-16.11809565095832\n#<METADATA>Ln prior of deletion of length 2=-16.11809565095832\n#<METADATA>Ln prior of deletion of length 1=-16.11809565095832\n#<METADATA>Ln prior of SNV=-13.815510557964275\n#<METADATA>Ln prior of insertion of length 1=-16.11809565095832\n#<METADATA>Ln prior of insertion of length 2=-16.11809565095832\n#<METADATA>Ln prior of insertion of length 3=-16.11809565095832\n#<METADATA>Ln prior of insertion of length 4=-16.11809565095832\n#<METADATA>Ln prior of insertion of length 5=-16.11809565095832\n#<METADATA>Ln prior of insertion of length 6=-16.11809565095832\n#<METADATA>Ln prior of insertion of length 7=-16.11809565095832\n#<METADATA>Ln prior of insertion of length 8=-16.11809565095832\n#<METADATA>Ln prior of insertion of length 9=-16.11809565095832\n#<METADATA>Ln prior of insertion of length 10=-16.11809565095832\n#<METADATA>Background beta-binomial cluster=weight = 0.5000, alpha = 1.00, beta = 1.00\n#<METADATA>High-AF beta-binomial cluster=weight = 0.5000, alpha = 10.00, beta = 1.00\n#<METADATA>threshold=0.0\n#<METADATA>fdr=0.0\n#<METADATA>sensitivity=0.0\nfilter\tFP\tFDR\tFN\tFNR\n",
+      "uid": 0,
+      "url": "http://localhost:1122/runs/e7cbf7ca-10bc-484e-a21d-872bd683d40c/data/outputs/filtering.stats"
+    },
+    {
+      "@id": "outputs/SM-74NEG.small-filtered.vcf.idx",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "OutputFile"
+      ],
+      "contentSize": 2029,
+      "dateModified": "2023-06-09T08:33:14.211201",
+      "encodingFormat": "application/octet-stream",
+      "gid": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "0377c9ef4b28ffbd1ac439ee88b5f84d143c0ed5d5fd4d52b9c1283c4f2a17774560a57f4b88d2a79d2769055653a8f0efd90052d07d22e562cb3b8d4677e80c",
+      "uid": 0,
+      "url": "http://localhost:1122/runs/e7cbf7ca-10bc-484e-a21d-872bd683d40c/data/outputs/SM-74NEG.small-filtered.vcf.idx"
+    },
+    {
+      "@id": "outputs/merged.stats",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "OutputFile"
+      ],
+      "contentSize": 29,
+      "dateModified": "2023-06-09T08:33:14.211201",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 2,
+      "mode": "-rw-r--r--",
+      "sha512": "25cb850b7093c2b4a838479c1d446b18333a79ee014997aa41b4a693931f1123dbe3f7e03dd5d3e5df2403f557e62c891fb4b8417b01824ea2e7e196afca3cb7",
+      "text": "statistic\tvalue\ncallable\t0.0\n",
+      "uid": 0,
+      "url": "http://localhost:1122/runs/e7cbf7ca-10bc-484e-a21d-872bd683d40c/data/outputs/merged.stats"
+    },
+    {
+      "@id": "http://edamontology.org/format_3016",
+      "@type": [
+        "Format"
+      ],
+      "name": "Variant Call Format (VCF) for sequence variation (indels, polymorphisms, structural variation)."
+    },
+    {
+      "@id": "outputs/SM-74NEG.small-filtered.vcf",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "OutputFile"
+      ],
+      "contentSize": 18456,
+      "dateModified": "2023-06-09T08:33:14.199201",
+      "encodingFormat": "text/plain",
+      "format": {
+        "@id": "http://edamontology.org/format_3016"
+      },
+      "gid": 0,
+      "lineCount": 154,
+      "mode": "-rw-r--r--",
+      "sha512": "d3168889e44b10334404773b20501d14673941e2f7a5ca8f7ff6f9902e2c33556edcfb476850406554037d57104e7775a66531e14e9794d1a3793d87f01b30c0",
+      "uid": 0,
+      "url": "http://localhost:1122/runs/e7cbf7ca-10bc-484e-a21d-872bd683d40c/data/outputs/SM-74NEG.small-filtered.vcf"
+    },
+    {
+      "@id": "exe/metadata.json",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 75645,
+      "dateModified": "2023-06-09T08:33:13.091200",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 519,
+      "mode": "-rw-r--r--",
+      "sha512": "fab5fe4df7be1184424fe1c6eb8a95f6a3e857bf0cb94ca6eff19c64e9426937b0a6e454866c434ee32781dff86d70bd3431aa374a490cbcc7a7ce34a7e83afa",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/Homo_sapiens_assembly19.fasta.fai",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2780,
+      "dateModified": "2023-06-09T07:57:27.161014",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 85,
+      "mode": "-rw-r--r--",
+      "sha512": "0b184aa069e60c18da41464ea1f8929ecea2c3c1678ca1f7214472ced056eacddf8768fb6e090037c192a7cc2a0ca55a2b3dd629b99cd0be229e6f6728fe39a8",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/SM-74NEG.small.bam.bai",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 696,
+      "dateModified": "2023-06-09T08:16:18.114465",
+      "encodingFormat": "application/octet-stream",
+      "gid": 0,
+      "lineCount": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "776b2567c914cff201099e193114b8a85845c534345461aa9e246b43f476d0bb51af596f99d590e5f74fcb19d1903eb3a4a632e2f5cc6d94fd3eb5d40a6d58b3",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/Homo_sapiens_assembly19.dict",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 14811,
+      "dateModified": "2023-06-09T08:16:15.294460",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 86,
+      "mode": "-rw-r--r--",
+      "sha512": "e6525c9882aa6bba55035958652e812214243fe78e0a8af7d0b0a9187b33aa736a78e97c4f9ba4959a516a8f2eeb7aea5e093e760720b23654ce916a06325f1c",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/SM-74NEG.small.bam",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 5554,
+      "dateModified": "2023-06-09T08:16:16.762462",
+      "encodingFormat": "application/gzip",
+      "format": {
+        "@id": "http://edamontology.org/format_2572"
+      },
+      "gid": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "25eb0f988587c4bdb39f5643879a6b3ccabb815a8535050fa534edf77e04409a872a4e1e9bb9cf996974fae34517f9ebceaa0a821c635bad9ab497702048af76",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/-955792700/Homo_sapiens_assembly19.fasta",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 3140756381,
+      "dateModified": "2023-06-09T08:16:14.002458",
+      "encodingFormat": "text/plain",
+      "format": {
+        "@id": "http://edamontology.org/format_1929"
+      },
+      "gid": 0,
+      "lineCount": 38774835,
+      "mode": "-rw-r--r--",
+      "sha512": "4a004a05c17ef82bd53b5b904eca543bc11a99007752ffa09b184ba659e7db0f7f0f52ecf9e8183155a89688c17f2b0df43f3b3c246083b33bf519f5a1ecdcb3",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/inputs/1761128164/0000-scattered.interval_list",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 16656,
+      "dateModified": "2023-06-09T08:18:31.602595",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 171,
+      "mode": "-rw-r--r--",
+      "sha512": "4cf62808230429dd5c9d485faf7f91e0b587fadc0ec36f2ef08be5800c6a2be651e63579977ea19d1261159fc06984686a58bad357a866755b614578da5fbd07",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/bamout.bam",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 0,
+      "dateModified": "2023-06-09T08:18:48.654602",
+      "encodingFormat": "inode/x-empty",
+      "format": {
+        "@id": "http://edamontology.org/format_2572"
+      },
+      "gid": 0,
+      "lineCount": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/tumor_name.txt",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 8,
+      "dateModified": "2023-06-09T08:18:52.126597",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "526319221fc8a5ec4f31d8349f42a8f4db5bade436b40bd250dc4359781913de9ed35b3f4018283c12273bf224846b2ebae52877afdb32fd81b41cda8f4c85b5",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/output.vcf",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 14136,
+      "dateModified": "2023-06-09T08:30:55.319113",
+      "encodingFormat": "text/plain",
+      "format": {
+        "@id": "http://edamontology.org/format_3016"
+      },
+      "gid": 0,
+      "lineCount": 129,
+      "mode": "-rw-r--r--",
+      "sha512": "a905aad68e2b05ea8eba48bf600dcfc0e6b962fa5625237bc0c4ff8ab1642d90bec1efdc230f56131636f9fc6f55a748ef1d59a736b72e510f5ff042efecf781",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/docker_cid",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 64,
+      "dateModified": "2023-06-09T08:18:48.354602",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "13b021beffb2e5866cce052fb78a6cea5178095a3b1afd0561e62ec541ff8b3173cb871c0eafab156e1e1f902d76920cc9097edd09150cc9001bb58ae26fee5a",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/stdout.background",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 92,
+      "dateModified": "2023-06-09T08:30:55.639113",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 4,
+      "mode": "-rw-r--r--",
+      "sha512": "080e81d389f8cb9659641b0a295538b718bf6161f464481db4b46796089370b744a4ce813fc323f6eb07dd8742c822385b71ea6e77d141c8d213f968f08d43ac",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/rc",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2,
+      "dateModified": "2023-06-09T08:30:55.371113",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 1,
+      "mode": "-rw-r--r--",
+      "sha512": "a546d1300f49037a465ecec8bc1ebd07d57015a5ff1abfa1c94da9b30576933fb68e3898ff764d4de6e6741da822a7c93adc6e845806a266a63aa14c8bb09ebb",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/f1r2.tar.gz",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 0,
+      "dateModified": "2023-06-09T08:18:48.658602",
+      "encodingFormat": "inode/x-empty",
+      "gid": 0,
+      "lineCount": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/script",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 8377,
+      "dateModified": "2023-06-09T08:18:48.274603",
+      "encodingFormat": "text/x-shellscript",
+      "gid": 0,
+      "lineCount": 115,
+      "mode": "-rw-r--r--",
+      "sha512": "f7e200761492e0f1897ad513ffb5867b4da9c34aee33ef70d77054f29ed47e7a510f2f0e6137400d931122db75d091bb3700dfcffb622d91455ece88debb0cf3",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/glob-33dc6fdaacf3c597568558628abb6bca.list",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 0,
+      "dateModified": "2023-06-09T08:30:55.395113",
+      "encodingFormat": "inode/x-empty",
+      "gid": 0,
+      "lineCount": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/script.background",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 541,
+      "dateModified": "2023-06-09T08:18:48.282603",
+      "encodingFormat": "text/x-shellscript",
+      "gid": 0,
+      "lineCount": 3,
+      "mode": "-rw-r--r--",
+      "sha512": "a67ca61b1ed724bd93d6f2c850d5f7d3aa24e10fa469f19b69a8bef1a76cead22c4acd08f412e0bf61d280d86f36bc295e7f5782025fc712e07d48e6b9562827",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/script.submit",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 1724,
+      "dateModified": "2023-06-09T08:18:48.282603",
+      "encodingFormat": "text/x-shellscript",
+      "gid": 0,
+      "lineCount": 20,
+      "mode": "-rw-r--r--",
+      "sha512": "19a27a10bb542637f4df20eeb28566877d5463f536906a014dc8e75ba35ee1ce0cdedb2f405dec61e74908a109850e4e6c49f25c9ad298bde6d69eed47759693",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/output.vcf.stats",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 29,
+      "dateModified": "2023-06-09T08:30:55.319113",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 2,
+      "mode": "-rw-r--r--",
+      "sha512": "25cb850b7093c2b4a838479c1d446b18333a79ee014997aa41b4a693931f1123dbe3f7e03dd5d3e5df2403f557e62c891fb4b8417b01824ea2e7e196afca3cb7",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/normal_name.txt",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 1,
+      "dateModified": "2023-06-09T08:18:48.658602",
+      "encodingFormat": "application/octet-stream",
+      "gid": 0,
+      "lineCount": 1,
+      "mode": "-rw-r--r--",
+      "sha512": "be688838ca8686e5c90689bf2ab585cef1137c999b48c70b92f67a5c34dc15697b5d11c982ed6d71be1e1e7f7b4e0733884aa97c3f7a339a8ed03577cf74be09",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/stdout",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 23,
+      "dateModified": "2023-06-09T08:30:55.323112",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 2,
+      "mode": "-rw-r--r--",
+      "sha512": "e37e123ab038c95f487fe36e14e1f43cc207ae1f58e36e5d0877607a18a7e5d0cebdb8fb418cbb52f4f803d81783f99057bef61f2caa71c8dd08f63c8ad56d41",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/glob-7ea20f185569d942d8b0cd340b53b5e1.list",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 0,
+      "dateModified": "2023-06-09T08:30:55.407113",
+      "encodingFormat": "inode/x-empty",
+      "gid": 0,
+      "lineCount": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/stderr",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 16511,
+      "dateModified": "2023-06-09T08:30:55.363113",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 166,
+      "mode": "-rw-r--r--",
+      "sha512": "0279421dbf462c9d26cdaa5011e9af9adff72d0e3e75445953e23dbdcb9c253e61600f3b329fe05cad7827e338ed76869c877db835364d72a71c1937365964e0",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/stderr.background",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 16838,
+      "dateModified": "2023-06-09T08:30:55.403113",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 168,
+      "mode": "-rw-r--r--",
+      "sha512": "549acc44cd21d3530407c0413bd11f81dc0b9a20befa5623e64274b5ffcdb0d6e6e753b77905d8fb4faae196b712927edb71301e0ba988df9a7a093bc31b13a4",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/output.vcf.idx",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2016,
+      "dateModified": "2023-06-09T08:30:55.323112",
+      "encodingFormat": "application/octet-stream",
+      "gid": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "82309a281a65fa5f61c3f222d354e2278f4a567a825a08633356a9c7cf2bbe234582bd73a3464f2e8514c27cfc24dc00bd55fc6c75bff0044823b05424eef45a",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/glob-33dc6fdaacf3c597568558628abb6bca/cromwell_glob_control_file",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 277,
+      "dateModified": "2023-06-09T08:30:55.391113",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 3,
+      "mode": "-rw-r--r--",
+      "sha512": "81a723e0a5026b24e22165d190dd1819f05f22568d73a936c8684fa33ec8516a25bed5d6e6ec4f5d64bfadcf452fae57e57a6370219adf207814eb1c2da08065",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/execution/glob-7ea20f185569d942d8b0cd340b53b5e1/cromwell_glob_control_file",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 277,
+      "dateModified": "2023-06-09T08:30:55.399113",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 3,
+      "mode": "-rw-r--r--",
+      "sha512": "81a723e0a5026b24e22165d190dd1819f05f22568d73a936c8684fa33ec8516a25bed5d6e6ec4f5d64bfadcf452fae57e57a6370219adf207814eb1c2da08065",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/tmp.8aa709a7/tmp_read_resource_7995864704543475376.config",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 510,
+      "dateModified": "2023-06-09T08:18:55.882598",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 9,
+      "mode": "-rw-r--r--",
+      "sha512": "e70e710cb6163bb5a7fee8a1f286a59d037f359d2a700df7afb3926dd3618dc817acd50236df22383ca7d9bd1bd7e18540f453e429b88e8560cafbd0f77c26ee",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-M2/shard-0/tmp.8aa709a7/tmp_read_resource_6732838587192686321.config",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 510,
+      "dateModified": "2023-06-09T08:18:55.910598",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 9,
+      "mode": "-rw-r--r--",
+      "sha512": "e70e710cb6163bb5a7fee8a1f286a59d037f359d2a700df7afb3926dd3618dc817acd50236df22383ca7d9bd1bd7e18540f453e429b88e8560cafbd0f77c26ee",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/1725183191/SM-74NEG.small-unfiltered.vcf.idx",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2034,
+      "dateModified": "2023-06-09T08:32:14.379173",
+      "encodingFormat": "application/octet-stream",
+      "gid": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "c18a103c5804d86f5005d54387c1fd4d6f2e762a9b89e2ab13e491850882dbb4928a012a6882678cf86924d699bbab7f19972a27833a9d536dd863f430e765c3",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/1725183191/SM-74NEG.small-unfiltered.vcf",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 14136,
+      "dateModified": "2023-06-09T08:32:14.379173",
+      "encodingFormat": "text/plain",
+      "format": {
+        "@id": "http://edamontology.org/format_3016"
+      },
+      "gid": 0,
+      "lineCount": 129,
+      "mode": "-rw-r--r--",
+      "sha512": "a905aad68e2b05ea8eba48bf600dcfc0e6b962fa5625237bc0c4ff8ab1642d90bec1efdc230f56131636f9fc6f55a748ef1d59a736b72e510f5ff042efecf781",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/-955792700/Homo_sapiens_assembly19.fasta.fai",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2780,
+      "dateModified": "2023-06-09T07:57:27.161014",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 85,
+      "mode": "-rw-r--r--",
+      "sha512": "0b184aa069e60c18da41464ea1f8929ecea2c3c1678ca1f7214472ced056eacddf8768fb6e090037c192a7cc2a0ca55a2b3dd629b99cd0be229e6f6728fe39a8",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/-955792700/Homo_sapiens_assembly19.dict",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 14811,
+      "dateModified": "2023-06-09T08:16:15.294460",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 86,
+      "mode": "-rw-r--r--",
+      "sha512": "e6525c9882aa6bba55035958652e812214243fe78e0a8af7d0b0a9187b33aa736a78e97c4f9ba4959a516a8f2eeb7aea5e093e760720b23654ce916a06325f1c",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/-955792700/Homo_sapiens_assembly19.fasta",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 3140756381,
+      "dateModified": "2023-06-09T08:16:14.002458",
+      "encodingFormat": "text/plain",
+      "format": {
+        "@id": "http://edamontology.org/format_1929"
+      },
+      "gid": 0,
+      "lineCount": 38774835,
+      "mode": "-rw-r--r--",
+      "sha512": "4a004a05c17ef82bd53b5b904eca543bc11a99007752ffa09b184ba659e7db0f7f0f52ecf9e8183155a89688c17f2b0df43f3b3c246083b33bf519f5a1ecdcb3",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/inputs/-702347564/merged.stats",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 29,
+      "dateModified": "2023-06-09T08:32:14.159173",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 2,
+      "mode": "-rw-r--r--",
+      "sha512": "25cb850b7093c2b4a838479c1d446b18333a79ee014997aa41b4a693931f1123dbe3f7e03dd5d3e5df2403f557e62c891fb4b8417b01824ea2e7e196afca3cb7",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/docker_cid",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 64,
+      "dateModified": "2023-06-09T08:32:18.339176",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "b4ceef018f5506b19b53f46f25bc360eda3b39054c823c9f147fe480f2739124b6da8c6422f8ecb715a05314e6cd9e70a7d19cfad089ce348da8bcb86d3f4078",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/stdout.background",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 69,
+      "dateModified": "2023-06-09T08:32:23.031180",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 2,
+      "mode": "-rw-r--r--",
+      "sha512": "df076d1a0103a3fd3647ecc758143accbfd58733a44a313a708eed73ed1fa96b9b6bfdfa88cdfd84e42d2694513e1902ac0e17bdd22da1cb1ff41c9f0285ac6e",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/rc",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2,
+      "dateModified": "2023-06-09T08:32:22.795179",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 1,
+      "mode": "-rw-r--r--",
+      "sha512": "a546d1300f49037a465ecec8bc1ebd07d57015a5ff1abfa1c94da9b30576933fb68e3898ff764d4de6e6741da822a7c93adc6e845806a266a63aa14c8bb09ebb",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/script",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2501,
+      "dateModified": "2023-06-09T08:32:18.215176",
+      "encodingFormat": "text/x-shellscript",
+      "gid": 0,
+      "lineCount": 48,
+      "mode": "-rw-r--r--",
+      "sha512": "d2d920c409a52833feba495f2a9c3918307a788339e2a08556227b91dcecc07262d4b37725af5b32e28ea4bc04cf7c9be946f0e243dac2453d62cf152f0a8290",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/filtering.stats",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 1583,
+      "dateModified": "2023-06-09T08:32:22.767179",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 27,
+      "mode": "-rw-r--r--",
+      "sha512": "8eaba0f6e42eec9c54d12f46d3c22d511488474ad7ad25d5021bef7f1af4d826c86410e6f666e848efaeab08b6a7cd402317ac8dbba9a8b84a8f6d3b6c9c542c",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/script.background",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 533,
+      "dateModified": "2023-06-09T08:32:18.223176",
+      "encodingFormat": "text/x-shellscript",
+      "gid": 0,
+      "lineCount": 3,
+      "mode": "-rw-r--r--",
+      "sha512": "480baf11b0d88fce4405b403e1f68b7a27d4723f53ec6f852311981c2e432601e16e6cdc778890601a1cd65f16a24d630f5cd265521dd333072fb0fbc29ea12c",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/script.submit",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 1696,
+      "dateModified": "2023-06-09T08:32:18.223176",
+      "encodingFormat": "text/x-shellscript",
+      "gid": 0,
+      "lineCount": 20,
+      "mode": "-rw-r--r--",
+      "sha512": "496eff50aed60a665aabfbde00fb364e51e1ffa58c126ea47fb520a4b9f94c8b21f9d701b37622d2b11be848e024f31e1174252d3200d7daf2337ee351fc5692",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/stdout",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 0,
+      "dateModified": "2023-06-09T08:32:18.691176",
+      "encodingFormat": "inode/x-empty",
+      "gid": 0,
+      "lineCount": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/stderr",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 4731,
+      "dateModified": "2023-06-09T08:32:22.787179",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 48,
+      "mode": "-rw-r--r--",
+      "sha512": "2b8cc0dc1976b4c89f504316e3c5ec4d84773c628eb48c92e2a3306694ede85b8abe124bdb2471e7efde630c4e2031e9df63e95e8382678d9a751378bf5721b3",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/SM-74NEG.small-filtered.vcf.idx",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2029,
+      "dateModified": "2023-06-09T08:32:22.771179",
+      "encodingFormat": "application/octet-stream",
+      "gid": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "0377c9ef4b28ffbd1ac439ee88b5f84d143c0ed5d5fd4d52b9c1283c4f2a17774560a57f4b88d2a79d2769055653a8f0efd90052d07d22e562cb3b8d4677e80c",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/stderr.background",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 4731,
+      "dateModified": "2023-06-09T08:32:22.787179",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 48,
+      "mode": "-rw-r--r--",
+      "sha512": "2b8cc0dc1976b4c89f504316e3c5ec4d84773c628eb48c92e2a3306694ede85b8abe124bdb2471e7efde630c4e2031e9df63e95e8382678d9a751378bf5721b3",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/execution/SM-74NEG.small-filtered.vcf",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 18456,
+      "dateModified": "2023-06-09T08:32:22.767179",
+      "encodingFormat": "text/plain",
+      "format": {
+        "@id": "http://edamontology.org/format_3016"
+      },
+      "gid": 0,
+      "lineCount": 154,
+      "mode": "-rw-r--r--",
+      "sha512": "d3168889e44b10334404773b20501d14673941e2f7a5ca8f7ff6f9902e2c33556edcfb476850406554037d57104e7775a66531e14e9794d1a3793d87f01b30c0",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-Filter/tmp.e650053b/tmp_read_resource_5468639361968868332.config",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 510,
+      "dateModified": "2023-06-09T08:32:22.551179",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 9,
+      "mode": "-rw-r--r--",
+      "sha512": "e70e710cb6163bb5a7fee8a1f286a59d037f359d2a700df7afb3926dd3618dc817acd50236df22383ca7d9bd1bd7e18540f453e429b88e8560cafbd0f77c26ee",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/inputs/-1352856860/output.vcf",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 14136,
+      "dateModified": "2023-06-09T08:30:55.319113",
+      "encodingFormat": "text/plain",
+      "format": {
+        "@id": "http://edamontology.org/format_3016"
+      },
+      "gid": 0,
+      "lineCount": 129,
+      "mode": "-rw-r--r--",
+      "sha512": "a905aad68e2b05ea8eba48bf600dcfc0e6b962fa5625237bc0c4ff8ab1642d90bec1efdc230f56131636f9fc6f55a748ef1d59a736b72e510f5ff042efecf781",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/inputs/-1352856860/output.vcf.idx",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2016,
+      "dateModified": "2023-06-09T08:30:55.323112",
+      "encodingFormat": "application/octet-stream",
+      "gid": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "82309a281a65fa5f61c3f222d354e2278f4a567a825a08633356a9c7cf2bbe234582bd73a3464f2e8514c27cfc24dc00bd55fc6c75bff0044823b05424eef45a",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/SM-74NEG.small-unfiltered.vcf.idx",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2034,
+      "dateModified": "2023-06-09T08:32:14.379173",
+      "encodingFormat": "application/octet-stream",
+      "gid": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "c18a103c5804d86f5005d54387c1fd4d6f2e762a9b89e2ab13e491850882dbb4928a012a6882678cf86924d699bbab7f19972a27833a9d536dd863f430e765c3",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/docker_cid",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 64,
+      "dateModified": "2023-06-09T08:32:08.343167",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "f8167680af3f085f3629840b79bf366ea2f7b3e5c851459eafa2f063e58d2b32cc2382a1b0f6e99853762be7946a2546c16808bbb410dee3305ba2cb2056b65e",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/stdout.background",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 86,
+      "dateModified": "2023-06-09T08:32:14.723173",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 4,
+      "mode": "-rw-r--r--",
+      "sha512": "7e27ab20a3a9843f75fc40e2c8f3e10ee107fe2c1f59293e785f431f28f0a9e362ee08c8341458928e410147b6767b6e92371cbda2e102a3effbc2a18be652f3",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/SM-74NEG.small-unfiltered.vcf",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 14136,
+      "dateModified": "2023-06-09T08:32:14.379173",
+      "encodingFormat": "text/plain",
+      "format": {
+        "@id": "http://edamontology.org/format_3016"
+      },
+      "gid": 0,
+      "lineCount": 129,
+      "mode": "-rw-r--r--",
+      "sha512": "a905aad68e2b05ea8eba48bf600dcfc0e6b962fa5625237bc0c4ff8ab1642d90bec1efdc230f56131636f9fc6f55a748ef1d59a736b72e510f5ff042efecf781",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/rc",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2,
+      "dateModified": "2023-06-09T08:32:14.471173",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 1,
+      "mode": "-rw-r--r--",
+      "sha512": "a546d1300f49037a465ecec8bc1ebd07d57015a5ff1abfa1c94da9b30576933fb68e3898ff764d4de6e6741da822a7c93adc6e845806a266a63aa14c8bb09ebb",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/script",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2194,
+      "dateModified": "2023-06-09T08:32:08.223167",
+      "encodingFormat": "text/x-shellscript",
+      "gid": 0,
+      "lineCount": 39,
+      "mode": "-rw-r--r--",
+      "sha512": "969c610a9c178d7362cd4a3f24510cd557865bef8199b3fe7449af84b4c08a654add73abb62f0d24a598e67426da3a9158f52b3aded04ab75db19bc947e99fc9",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/script.background",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 539,
+      "dateModified": "2023-06-09T08:32:08.227167",
+      "encodingFormat": "text/x-shellscript",
+      "gid": 0,
+      "lineCount": 3,
+      "mode": "-rw-r--r--",
+      "sha512": "600dc0ae04da3ac42a864cbc35c49e5e1b684e313427243ec6a408fbf001f4fd169bab548a0e0d1c510b6a351c9fba57d2d14abd06a38090d5653594b35cb90d",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/script.submit",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 1717,
+      "dateModified": "2023-06-09T08:32:08.227167",
+      "encodingFormat": "text/x-shellscript",
+      "gid": 0,
+      "lineCount": 20,
+      "mode": "-rw-r--r--",
+      "sha512": "90a96ae584b12da29d8e238e3ac31885c099b814f299bf3fa71871724f2e49b72a5df71c4bc125e24560f910d6023815b48df37b896cc46c2005349def332a62",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/stdout",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 17,
+      "dateModified": "2023-06-09T08:32:14.403173",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 2,
+      "mode": "-rw-r--r--",
+      "sha512": "6b702efecddd4b667cbe523eae6cfcf47a93f161af8ba152ea786fd13b82ea48df34c613c1364a28911470cb81d54f3975e6e64b1707ffcc6334887d0884a3f0",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/stderr",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 1791,
+      "dateModified": "2023-06-09T08:32:14.463173",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 11,
+      "mode": "-rw-r--r--",
+      "sha512": "2fbb012fc0c752e441a3a4481f3d5bd9fdb7754690b8f111070d56a1923e10072e9a68c8f3bcd053d5f3271b1ba5bab236c789ba69077579fefc41e5c589dff7",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeVCFs/execution/stderr.background",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 1791,
+      "dateModified": "2023-06-09T08:32:14.463173",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 11,
+      "mode": "-rw-r--r--",
+      "sha512": "2fbb012fc0c752e441a3a4481f3d5bd9fdb7754690b8f111070d56a1923e10072e9a68c8f3bcd053d5f3271b1ba5bab236c789ba69077579fefc41e5c589dff7",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/inputs/-955792700/Homo_sapiens_assembly19.fasta.fai",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2780,
+      "dateModified": "2023-06-09T07:57:27.161014",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 85,
+      "mode": "-rw-r--r--",
+      "sha512": "0b184aa069e60c18da41464ea1f8929ecea2c3c1678ca1f7214472ced056eacddf8768fb6e090037c192a7cc2a0ca55a2b3dd629b99cd0be229e6f6728fe39a8",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/inputs/-955792700/Homo_sapiens_assembly19.dict",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 14811,
+      "dateModified": "2023-06-09T08:16:15.294460",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 86,
+      "mode": "-rw-r--r--",
+      "sha512": "e6525c9882aa6bba55035958652e812214243fe78e0a8af7d0b0a9187b33aa736a78e97c4f9ba4959a516a8f2eeb7aea5e093e760720b23654ce916a06325f1c",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/inputs/-955792700/Homo_sapiens_assembly19.fasta",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 3140756381,
+      "dateModified": "2023-06-09T08:16:14.002458",
+      "encodingFormat": "text/plain",
+      "format": {
+        "@id": "http://edamontology.org/format_1929"
+      },
+      "gid": 0,
+      "lineCount": 38774835,
+      "mode": "-rw-r--r--",
+      "sha512": "4a004a05c17ef82bd53b5b904eca543bc11a99007752ffa09b184ba659e7db0f7f0f52ecf9e8183155a89688c17f2b0df43f3b3c246083b33bf519f5a1ecdcb3",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/docker_cid",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 64,
+      "dateModified": "2023-06-09T08:18:26.978591",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "d88a0ca631dd6826d4692159df14094482fb1c7e024124b130eba692620069a99779dc1e51ec22f7b279d6301419a8c5f05418902a184093bf1270b9027a5cf6",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/stdout.background",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 69,
+      "dateModified": "2023-06-09T08:18:31.858595",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 2,
+      "mode": "-rw-r--r--",
+      "sha512": "0ce302ad534f3aa3b896604a9b9c411a88206a483ba1ce2b63612e3ee86f920527a6d8787f46369c8390b3526a1e9bbd2d4ebe74c5e34ef9dc80f6843806c6ad",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/0000-scattered.interval_list",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 16656,
+      "dateModified": "2023-06-09T08:18:31.602595",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 171,
+      "mode": "-rw-r--r--",
+      "sha512": "4cf62808230429dd5c9d485faf7f91e0b587fadc0ec36f2ef08be5800c6a2be651e63579977ea19d1261159fc06984686a58bad357a866755b614578da5fbd07",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/rc",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2,
+      "dateModified": "2023-06-09T08:18:31.606595",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 1,
+      "mode": "-rw-r--r--",
+      "sha512": "a546d1300f49037a465ecec8bc1ebd07d57015a5ff1abfa1c94da9b30576933fb68e3898ff764d4de6e6741da822a7c93adc6e845806a266a63aa14c8bb09ebb",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/script",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 4137,
+      "dateModified": "2023-06-09T08:16:59.686524",
+      "encodingFormat": "text/x-shellscript",
+      "gid": 0,
+      "lineCount": 60,
+      "mode": "-rw-r--r--",
+      "sha512": "88eb4666eb32ecbf669cd7263d6a1938fd06886a334239fe02a839c9ad96957792576c996aaadaae511aa25e9aec3985d6b6063500a26cf0aa93a18e1f038aae",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/script.background",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 549,
+      "dateModified": "2023-06-09T08:16:59.722524",
+      "encodingFormat": "text/x-shellscript",
+      "gid": 0,
+      "lineCount": 3,
+      "mode": "-rw-r--r--",
+      "sha512": "fdd5c140d47d30702cee17d23a3de0125089b0a14fc0abac51eca195014c82cc6d0dcfc4ad685a4e3cca56d603a5e332214d41203fc6b9a71e1945f7fe4d8d2b",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/script.submit",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 1752,
+      "dateModified": "2023-06-09T08:16:59.718524",
+      "encodingFormat": "text/x-shellscript",
+      "gid": 0,
+      "lineCount": 20,
+      "mode": "-rw-r--r--",
+      "sha512": "dc58a075a4494de921fecc0959cb98489271b2e914cd1856ebf4461352c015f7a0084fb5622c3eaec989505ab4c83643f037f9c88cec9c804416af09d0207213",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/stdout",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 0,
+      "dateModified": "2023-06-09T08:18:27.450591",
+      "encodingFormat": "inode/x-empty",
+      "gid": 0,
+      "lineCount": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/glob-0fc990c5ca95eebc97c4c204e3e303e1.list",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 29,
+      "dateModified": "2023-06-09T08:18:31.638595",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 1,
+      "mode": "-rw-r--r--",
+      "sha512": "a151217d1b6acd7e587a49e5dee436b66592f1f86156f5987f8885ee7be578e1e667dea2603fef7585ea68748176f259ac565f5f116b869efbc15a0acdf78473",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/stderr",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 3215,
+      "dateModified": "2023-06-09T08:18:31.590595",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 35,
+      "mode": "-rw-r--r--",
+      "sha512": "24e1c3591581a78a985b43930862a9a225fe0bb127b30f21c9a61e96943f4f956a3665bd09e2d5e07d0fea9d0a9b7cf1b038d922560fe3b7ccebf013889669cb",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/stderr.background",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 3805,
+      "dateModified": "2023-06-09T08:18:31.590595",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 43,
+      "mode": "-rw-r--r--",
+      "sha512": "595f4f356c6e7c27cb74036e774348ad34129b8427683c9af0c294251c5c403545c1db0b5e0af24cc4f71e628c7571e6b0f8a55cb93c71b475ff73916317a8be",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/glob-0fc990c5ca95eebc97c4c204e3e303e1/0000-scattered.interval_list",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 16656,
+      "dateModified": "2023-06-09T08:18:31.602595",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 171,
+      "mode": "-rw-r--r--",
+      "sha512": "4cf62808230429dd5c9d485faf7f91e0b587fadc0ec36f2ef08be5800c6a2be651e63579977ea19d1261159fc06984686a58bad357a866755b614578da5fbd07",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/glob-0fc990c5ca95eebc97c4c204e3e303e1/cromwell_glob_control_file",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 277,
+      "dateModified": "2023-06-09T08:18:31.634595",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 3,
+      "mode": "-rw-r--r--",
+      "sha512": "81a723e0a5026b24e22165d190dd1819f05f22568d73a936c8684fa33ec8516a25bed5d6e6ec4f5d64bfadcf452fae57e57a6370219adf207814eb1c2da08065",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-SplitIntervals/execution/interval-files/0000-scattered.interval_list",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 16656,
+      "dateModified": "2023-06-09T08:18:31.558595",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 171,
+      "mode": "-rw-r--r--",
+      "sha512": "4cf62808230429dd5c9d485faf7f91e0b587fadc0ec36f2ef08be5800c6a2be651e63579977ea19d1261159fc06984686a58bad357a866755b614578da5fbd07",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/inputs/-1352856860/output.vcf.stats",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 29,
+      "dateModified": "2023-06-09T08:30:55.319113",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 2,
+      "mode": "-rw-r--r--",
+      "sha512": "25cb850b7093c2b4a838479c1d446b18333a79ee014997aa41b4a693931f1123dbe3f7e03dd5d3e5df2403f557e62c891fb4b8417b01824ea2e7e196afca3cb7",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/docker_cid",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 64,
+      "dateModified": "2023-06-09T08:32:08.295167",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 0,
+      "mode": "-rw-r--r--",
+      "sha512": "0a2af5f4c81f88f4e4ca74255098b1d41336b0bef926258fa0234dbfd7e19e0aedf67032ee5d473da4977f74d1fcf1c6328517bfc74e5db67ad42029828e60c6",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/stdout.background",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 92,
+      "dateModified": "2023-06-09T08:32:14.515173",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 4,
+      "mode": "-rw-r--r--",
+      "sha512": "037bae46d69749280ed0ded58c8b9117ff5ee3136de28db4e297a6dff70993e1c5c8789ab1e6f55418c4b4722285b38192ade0b10b74eca6737a35840546ac2b",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/rc",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2,
+      "dateModified": "2023-06-09T08:32:14.211173",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 1,
+      "mode": "-rw-r--r--",
+      "sha512": "a546d1300f49037a465ecec8bc1ebd07d57015a5ff1abfa1c94da9b30576933fb68e3898ff764d4de6e6741da822a7c93adc6e845806a266a63aa14c8bb09ebb",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/script",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2217,
+      "dateModified": "2023-06-09T08:32:08.215167",
+      "encodingFormat": "text/x-shellscript",
+      "gid": 0,
+      "lineCount": 42,
+      "mode": "-rw-r--r--",
+      "sha512": "5d5b908cac95d2a26638d4086373c0b220be63ca857baf87c6c3ef8270f31fe2a0c401862d77ed5523ef68c78d0b0125b193b9001d494b5073dbdd166605ddc2",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/script.background",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 541,
+      "dateModified": "2023-06-09T08:32:08.223167",
+      "encodingFormat": "text/x-shellscript",
+      "gid": 0,
+      "lineCount": 3,
+      "mode": "-rw-r--r--",
+      "sha512": "541aedd7f219ffe1229bdbcf53acca31877d36b62e2764bff11975f353711d958c860c55698400ebbfc5cf3cbaa8a10c1bab76cdb90ec27270c7f1d8a3a6fb74",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/script.submit",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 1724,
+      "dateModified": "2023-06-09T08:32:08.219167",
+      "encodingFormat": "text/x-shellscript",
+      "gid": 0,
+      "lineCount": 20,
+      "mode": "-rw-r--r--",
+      "sha512": "72bd71d0f037f4d7aa87691c753de83005912787e427091fd2d94dcbdb7af433137dd8f50baa676bd6489a0669df1cee031007f1e710461c0447e04b13b6ca41",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/stdout",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 23,
+      "dateModified": "2023-06-09T08:32:14.171173",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 2,
+      "mode": "-rw-r--r--",
+      "sha512": "e37e123ab038c95f487fe36e14e1f43cc207ae1f58e36e5d0877607a18a7e5d0cebdb8fb418cbb52f4f803d81783f99057bef61f2caa71c8dd08f63c8ad56d41",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/stderr",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2866,
+      "dateModified": "2023-06-09T08:32:14.199172",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 31,
+      "mode": "-rw-r--r--",
+      "sha512": "4db99db4893a11c097c7693f99e82b8321339a6418d1d9c93ea7335fcf68ec9c2325f98b512d3802905fc8311df27979f067531e93d93f6926f0081b6942dc11",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/stderr.background",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 2866,
+      "dateModified": "2023-06-09T08:32:14.199172",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 31,
+      "mode": "-rw-r--r--",
+      "sha512": "4db99db4893a11c097c7693f99e82b8321339a6418d1d9c93ea7335fcf68ec9c2325f98b512d3802905fc8311df27979f067531e93d93f6926f0081b6942dc11",
+      "uid": 0
+    },
+    {
+      "@id": "exe/cromwell-executions/Mutect2/5a4b2b57-1065-4cd8-ae40-1ee3d917ebaf/call-MergeStats/execution/merged.stats",
+      "@type": [
+        "File",
+        "FormalParameter",
+        "IntermediateFile"
+      ],
+      "contentSize": 29,
+      "dateModified": "2023-06-09T08:32:14.159173",
+      "encodingFormat": "text/plain",
+      "gid": 0,
+      "lineCount": 2,
+      "mode": "-rw-r--r--",
+      "sha512": "25cb850b7093c2b4a838479c1d446b18333a79ee014997aa41b4a693931f1123dbe3f7e03dd5d3e5df2403f557e62c891fb4b8417b01824ea2e7e196afca3cb7",
+      "uid": 0
+    }
+  ]
+}
