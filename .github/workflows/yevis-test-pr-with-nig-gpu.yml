@@ -1,4 +1,4 @@
-name: "yevis-test-pr"
+name: "yevis-test-pr-with-nig-gpu"
 
 on:
   pull_request_target:
@@ -19,14 +19,14 @@ permissions:
 
 jobs:
   test:
-    runs-on: ubuntu-20.04
+    runs-on: self-hosted
     if: >
       (github.event_name == 'issue_comment' &&
       contains(github.event.comment.html_url, '/pull/') &&
       startsWith(github.event.comment.body, '/re-run') &&
-      !contains(github.event.issue.labels.*.name, 'nig-gpu')) ||
+      contains(github.event.issue.labels.*.name, 'nig-gpu')) ||
       (github.event_name == 'pull_request_target' &&
-      !contains(github.event.pull_request.labels.*.name, 'nig-gpu'))
+      contains(github.event.pull_request.labels.*.name, 'nig-gpu'))
     steps:
       - name: "Set environment variables"
         id: set-env
@@ -39,31 +39,16 @@ jobs:
               echo "PR_NUM=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
           fi
 
-      - name: "Download yevis binary from artifact"
-        id: download-binary-artifact
-        run: |
-          RUN_ID=`gh run --repo sapporo-wes/yevis-cli list --workflow build_binary --json databaseId --jq .[0].databaseId`
-          gh run --repo sapporo-wes/yevis-cli download ${RUN_ID} -n yevis
-          chmod +x yevis
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        continue-on-error: true
-
-      - name: "Download yevis binary from release"
-        if: ${{ steps.download-binary-artifact.outcome != 'success' }}
-        run: |
-          curl -fsSL -O https://github.com/sapporo-wes/yevis-cli/releases/latest/download/yevis
-          chmod +x ./yevis
-
       - name: "Run tests"
         id: test
         run: |
           mkdir -p ./test-logs ./test-results
-          SAPPORO_RUN_DIR=${GITHUB_WORKSPACE}/test-results \
-            ./yevis test \
+          SAPPORO_RUN_DIR=${PWD}/test-results \
+            yevis test \
               --verbose \
               --fetch-ro-crate \
-              --from-pr ${{ PR_URL }} \
+              --from-pr ${PR_URL} \
+              --wes-location http://172.19.7.164:1122 \
               2>&1 | tee ./test-logs/yevis-log.txt
           exit ${PIPESTATUS[0]}
         continue-on-error: true
@@ -71,7 +56,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "List test results"
-        run: sudo ls -lR ./test-results > ./test-logs/test-results-list.txt
+        run: ls -lR ./test-results > ./test-logs/test-results-list.txt
 
       - name: "Upload test logs"
         uses: actions/upload-artifact@v3
@@ -83,9 +68,9 @@ jobs:
       - name: "Comment to the pull request"
         run: |
           if [[ "${{ steps.test.outcome }}" == "success" ]]; then
-            gh pr --repo ${{ github.repository }} edit ${{ PR_NUM }} --remove-label invalid
+            gh pr --repo ${{ github.repository }} edit ${PR_NUM} --remove-label invalid
           else
-            gh pr --repo ${{ github.repository }} edit ${{ PR_NUM }} --add-label invalid
+            gh pr --repo ${{ github.repository }} edit ${PR_NUM} --add-label invalid
           fi
           COMMENT=$(cat <<EOF
           ## Test results
