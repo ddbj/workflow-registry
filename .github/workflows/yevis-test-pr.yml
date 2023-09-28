@@ -63,7 +63,7 @@ jobs:
             ./yevis test \
               --verbose \
               --fetch-ro-crate \
-              --from-pr ${{ PR_URL }} \
+              --from-pr ${PR_URL} \
               2>&1 | tee ./test-logs/yevis-log.txt
           exit ${PIPESTATUS[0]}
         continue-on-error: true
@@ -83,9 +83,9 @@ jobs:
       - name: "Comment to the pull request"
         run: |
           if [[ "${{ steps.test.outcome }}" == "success" ]]; then
-            gh pr --repo ${{ github.repository }} edit ${{ PR_NUM }} --remove-label invalid
+            gh pr --repo ${{ github.repository }} edit ${PR_NUM} --remove-label invalid
           else
-            gh pr --repo ${{ github.repository }} edit ${{ PR_NUM }} --add-label invalid
+            gh pr --repo ${{ github.repository }} edit ${PR_NUM} --add-label invalid
           fi
           COMMENT=$(cat <<EOF
           ## Test results
@@ -94,7 +94,7 @@ jobs:
           - Test logs artifact: yevis-test-logs
           EOF
           )
-          gh pr --repo ${{ github.repository }} comment ${{ PR_NUM }} --body "${COMMENT}"
+          gh pr --repo ${{ github.repository }} comment ${PR_NUM} --body "${COMMENT}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

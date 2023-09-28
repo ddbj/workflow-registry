@@ -79,7 +79,7 @@ jobs:
           - Test logs artifact: yevis-test-logs
           EOF
           )
-          gh pr --repo ${{ github.repository }} comment ${{ PR_NUM }} --body "${COMMENT}"
+          gh pr --repo ${{ github.repository }} comment ${PR_NUM} --body "${COMMENT}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
