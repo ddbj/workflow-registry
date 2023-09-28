@@ -7,64 +7,69 @@ authors:
     name: Tsuyoshi Hachiya
     affiliation: Genome Analytics Japan Inc.
     orcid: 0000-0002-5274-3266
+zenodo:
+  url: "https://zenodo.org/record/8387186"
+  id: 8387186
+  doi: 10.5281/zenodo.8387186
+  concept_doi: 10.5281/zenodo.8387185
 workflow:
   name: germline-gpu
-  readme: "https://raw.githubusercontent.com/NCGM-genome/WGSpipeline/82db4caa257aa2304038def8f94a834056a32f96/README.md"
+  readme: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/README.md"
   language:
     type: CWL
     version: v1.1
   files:
-    - url: "https://raw.githubusercontent.com/NCGM-genome/WGSpipeline/82db4caa257aa2304038def8f94a834056a32f96/Workflows/germline-gpu.cwl"
+    - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/germline-gpu.cwl"
       target: germline-gpu.cwl
       type: primary
   testing:
     - id: test_1
       files:
-        - url: "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta"
+        - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/Homo_sapiens_assembly38.fasta"
           target: Homo_sapiens_assembly38.fasta
           type: other
-        - url: "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta.fai"
+        - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/Homo_sapiens_assembly38.fasta.fai"
           target: Homo_sapiens_assembly38.fasta.fai
           type: other
-        - url: "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.dict"
+        - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/Homo_sapiens_assembly38.dict"
           target: Homo_sapiens_assembly38.dict
           type: other
-        - url: "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta.64.alt"
+        - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/Homo_sapiens_assembly38.fasta.64.alt"
           target: Homo_sapiens_assembly38.fasta.64.alt
           type: other
-        - url: "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta.64.amb"
+        - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/Homo_sapiens_assembly38.fasta.64.amb"
           target: Homo_sapiens_assembly38.fasta.64.amb
           type: other
-        - url: "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta.64.ann"
+        - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/Homo_sapiens_assembly38.fasta.64.ann"
           target: Homo_sapiens_assembly38.fasta.64.ann
           type: other
-        - url: "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta.64.bwt"
+        - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/Homo_sapiens_assembly38.fasta.64.bwt"
           target: Homo_sapiens_assembly38.fasta.64.bwt
           type: other
-        - url: "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta.64.pac"
+        - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/Homo_sapiens_assembly38.fasta.64.pac"
           target: Homo_sapiens_assembly38.fasta.64.pac
           type: other
-        - url: "https://storage.googleapis.com/gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta.64.sa"
+        - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/Homo_sapiens_assembly38.fasta.64.sa"
           target: Homo_sapiens_assembly38.fasta.64.sa
           type: other
-        - url: "https://raw.githubusercontent.com/NCGM-genome/WGSpipeline/82db4caa257aa2304038def8f94a834056a32f96/interval_files/autosome.bed"
+        - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/autosome.bed"
           target: autosome.bed
           type: other
-        - url: "https://raw.githubusercontent.com/NCGM-genome/WGSpipeline/82db4caa257aa2304038def8f94a834056a32f96/interval_files/PAR.bed"
+        - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/PAR.bed"
           target: PAR.bed
           type: other
-        - url: "https://raw.githubusercontent.com/NCGM-genome/WGSpipeline/82db4caa257aa2304038def8f94a834056a32f96/interval_files/chrX.bed"
+        - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/chrX.bed"
           target: chrX.bed
           type: other
-        - url: "https://raw.githubusercontent.com/NCGM-genome/WGSpipeline/82db4caa257aa2304038def8f94a834056a32f96/interval_files/chrY.bed"
+        - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/chrY.bed"
           target: chrY.bed
           type: other
-        - url: "https://storage.googleapis.com/gatk-test-data/wgs_fastq/NA12878_20k/H06HDADXX130110.1.ATCACGAT.20k_reads_1.fastq"
+        - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/H06HDADXX130110.1.ATCACGAT.20k_reads_1.fastq"
           target: H06HDADXX130110.1.ATCACGAT.20k_reads_1.fastq
           type: other
-        - url: "https://storage.googleapis.com/gatk-test-data/wgs_fastq/NA12878_20k/H06HDADXX130110.1.ATCACGAT.20k_reads_2.fastq"
+        - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/H06HDADXX130110.1.ATCACGAT.20k_reads_2.fastq"
           target: H06HDADXX130110.1.ATCACGAT.20k_reads_2.fastq
           type: other
-        - url: "https://raw.githubusercontent.com/NCGM-genome/WGSpipeline/82db4caa257aa2304038def8f94a834056a32f96/yevis/wf-params.yml"
+        - url: "https://zenodo.org/api/files/5ff98072-cdf7-4141-b400-1f8ba7f3246f/wf-params.yml"
           target: wf-params.yml
           type: wf_params
