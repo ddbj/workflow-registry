@@ -1,0 +1,60 @@
+---
+id: 8a684dfb-1212-49b1-b788-7759b9d02531
+version: 1.0.0
+license: CC0-1.0
+authors:
+  - github_account: manabuishii
+    name: Manabu ISHII
+    affiliation: GAJ
+workflow:
+  name: haplotypecaller-gvcf-gatk4
+  readme: "https://raw.githubusercontent.com/gatk-workflows/gatk4-germline-snps-indels/4d8130f88e2e1f00c57122832721ecc78a5b0102/README.md"
+  language:
+    type: WDL
+    version: "1.0"
+  files:
+    - url: "https://raw.githubusercontent.com/gatk-workflows/gatk4-germline-snps-indels/4d8130f88e2e1f00c57122832721ecc78a5b0102/.dockstore.yml"
+      target: ".dockstore.yml"
+      type: secondary
+    - url: "https://raw.githubusercontent.com/gatk-workflows/gatk4-germline-snps-indels/4d8130f88e2e1f00c57122832721ecc78a5b0102/LICENSE"
+      target: LICENSE
+      type: secondary
+    - url: "https://raw.githubusercontent.com/gatk-workflows/gatk4-germline-snps-indels/4d8130f88e2e1f00c57122832721ecc78a5b0102/README.md"
+      target: README.md
+      type: secondary
+    - url: "https://raw.githubusercontent.com/gatk-workflows/gatk4-germline-snps-indels/4d8130f88e2e1f00c57122832721ecc78a5b0102/generic.google-papi.options.json"
+      target: generic.google-papi.options.json
+      type: secondary
+    - url: "https://raw.githubusercontent.com/gatk-workflows/gatk4-germline-snps-indels/4d8130f88e2e1f00c57122832721ecc78a5b0102/haplotypecaller-gvcf-gatk4.hg38.wgs.inputs.json"
+      target: haplotypecaller-gvcf-gatk4.hg38.wgs.inputs.json
+      type: secondary
+    - url: "https://raw.githubusercontent.com/gatk-workflows/gatk4-germline-snps-indels/4d8130f88e2e1f00c57122832721ecc78a5b0102/haplotypecaller-gvcf-gatk4.wdl"
+      target: haplotypecaller-gvcf-gatk4.wdl
+      type: primary
+  testing:
+    - id: test_1
+      files:
+        - url: "https://dl.dropboxusercontent.com/s/b6mvc3h69ym5e02/haplotypecaller-gvcf-gatk4.input.yevis.json"
+          target: wf_params.json
+          type: wf_params
+        - url: "https://dl.dropboxusercontent.com/s/pz64ru79ozt8gdq/Homo_sapiens_assembly38.fasta"
+          target: Homo_sapiens_assembly38.fasta
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/dhgvp47oncgwybc/Homo_sapiens_assembly38.fasta.fai"
+          target: Homo_sapiens_assembly38.fasta.fai
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/75oefbgwv610jy2/Homo_sapiens_assembly38.dict"
+          target: Homo_sapiens_assembly38.dict
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/3lhp7azgdbhogky/interval_list.txt"
+          target: interval_list.txt
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/n8r0jgqo96q4r8o/NA12775_small.bam"
+          target: NA12775_small.bam
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/pq729zgjpyp649j/NA12775_small.bam.bai"
+          target: NA12775_small.bam.bai
+          type: other
+        - url: "https://dl.dropboxusercontent.com/s/q7v2ajo4aaom5pm/wgs_calling_regions.hg38.interval_list"
+          target: wgs_calling_regions.hg38.interval_list
+          type: other
